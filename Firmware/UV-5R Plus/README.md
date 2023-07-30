@@ -1,1 +1,1 @@
-Firmware for QuangSheng UV-5R Plus
+Firmware by piotr022 for QuangSheng UV-5R Plus
