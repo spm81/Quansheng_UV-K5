@@ -5,4 +5,6 @@
 
 
 # You have a QuanSheng UV-K6 & UV-R5 Plus and you get this error ???
+
+<img src="[/path/to/img.jpg](https://github.com/spm81/Quansheng_UV-K5/blob/main/photos/fwerror.jpg?raw=true)" alt=" title="FW Error">
 !(https://github.com/spm81/Quansheng_UV-K5/blob/main/photos/fwerror.jpg?raw=true)
