@@ -5,4 +5,4 @@
 
 
 # You have a QuanSheng UV-K6 & UV-R5 Plus and you get this error ???
-(https://github.com/spm81/Quansheng_UV-K5/blob/main/photos/fwerror.jpg?raw=true)
+[https://github.com/spm81/Quansheng_UV-K5/blob/main/photos/fwerror.jpg?raw=true]
