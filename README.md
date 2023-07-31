@@ -5,10 +5,11 @@
 
 
 # You have a QuanSheng UV-K6 & UV-R5 Plus and you get this error ???
+![Screenshot](https://raw.githubusercontent.com/spm81/Quansheng_UV-K5/main/photos/fwerror.jpg)
+
 You are in the right place !!! :) <br>
 You can find more help on [QuanSheng UV-K5 Telegram Group](https://t.me/quansheng_uvk5_en) (English Only)<br><br>
 Podes-me encontrar no [Telegram](https://t.me/PMR446PT) (Portuguese Only) !!!<br><br>
 
-![Screenshot](https://raw.githubusercontent.com/spm81/Quansheng_UV-K5/main/photos/fwerror.jpg)
 
 
