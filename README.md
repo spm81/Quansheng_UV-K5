@@ -1,4 +1,4 @@
-# QuanSheng_UV-K5 Firmwares for UV-K6 & UV-R5 Plus
+# QuanSheng_UV-K5 Firmwares for UV-K5, UV-K5(8), UV-K6 & UV-R5 Plus
 
 [QuanSheng UV-K5 Firmwares](https://github.com/spm81/Quansheng_UV-K5/tree/main/Firmware/UV-K5)<br>
 [QuanSheng UV-R5 Plus Firmwares](https://github.com/spm81/Quansheng_UV-K5/tree/main/Firmware/UV-5R%20Plus)<br>
