@@ -1,4 +1,4 @@
-#QuanSheng UV-K5 Firmware
+#QuanSheng UV-K5 Firmwares
 
 [Oficial UV-K5 Firmware](http://en.qsfj.com/products/3002)<br>
 [piotr022 UV-K5 Firmwares](https://github.com/piotr022/UV_K5_playground/releases)<br>
