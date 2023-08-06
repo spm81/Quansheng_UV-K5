@@ -12,5 +12,12 @@ You are in the right place !!! :) <br>
 You can find more help on [QuanSheng UV-K5 Telegram Group](https://t.me/quansheng_uvk5_en) (English Only)<br><br>
 Podes-me encontrar no [Telegram](https://t.me/PMR446PT) (Portuguese Only) !!!<br><br>
 
-
+# Explanation of differences between product types
+FCC ID : XBPUV-K5
+Model Number: UV-K5, UV-K5(2), UV-K5(6), UV-K5(8), UV-K5(9), UV-K5(11),
+UV-K5(22), UV-K5(66), UV-K5(88), UV-K5(99), UV-5R, UV-5R PLUS, UV-82
+To Whom It May Concern:
+We, The QUANSHENG ELECTRONICS CO., LTD. hereby declare that the models are
+identical except the model names & cover designs.
+https://fcc.report/FCC-ID/XBPUV-K5/6401581.pdf
 
