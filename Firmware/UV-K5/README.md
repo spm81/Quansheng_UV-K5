@@ -10,3 +10,5 @@
 [amnemonic firmware kitchen](https://github.com/amnemonic/Quansheng_UV-K5_Firmware/tree/main)<br>
 [fagci UV-K5 firmware encoder/decoder](https://github.com/fagci/qs-uvk5-firmware-modder)<br>
 [On-line Firmware modder by @whosmatt](https://whosmatt.github.io/uvmod/)
+
+#QuanSheng UV-K5 Software & Drivers(https://github.com/spm81/Quansheng_UV-K5/tree/main/Software)
