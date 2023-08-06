@@ -5,4 +5,4 @@
 [Tunas1337 UV-K5 Firmwares](https://github.com/Tunas1337/UV-K5-Modded-Firmwares)<br>
 [fagci UV-K5 firmware encoder/decoder](https://github.com/fagci/qs-uvk5-firmware-modder)<br>
 [amnemonic firmware kitchen](https://github.com/amnemonic/Quansheng_UV-K5_Firmware/tree/main)<br>
-[On-line Firmware modder by @whosmatt] (https://whosmatt.github.io/uvmod/)
+[On-line Firmware modder by @whosmatt](https://whosmatt.github.io/uvmod/)
