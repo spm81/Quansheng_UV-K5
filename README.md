@@ -21,3 +21,6 @@ We, The QUANSHENG ELECTRONICS CO., LTD. hereby declare that the models are
 identical except the model names & cover designs.
 https://fcc.report/FCC-ID/XBPUV-K5/6401581.pdf
 
+#FCC Report
+https://fccid.io/XBPUV-K5
+
