@@ -1,3 +1,5 @@
+# [NEW UVMOD in Portuguese](https://uvmod.meshtastic.pt/)
+
 # QuanSheng_UV-K5 Firmwares for UV-K5, UV-K5(8), UV-K6 & UV-R5 Plus
 
 [QuanSheng UV-K5 Firmwares](https://github.com/spm81/Quansheng_UV-K5/tree/main/Firmware/UV-K5)<br>
