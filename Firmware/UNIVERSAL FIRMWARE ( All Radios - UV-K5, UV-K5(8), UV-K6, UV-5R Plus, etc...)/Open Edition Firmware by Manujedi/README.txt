@@ -1,0 +1,1 @@
+Open Edition Firmware by Manuel Scan db from all memory channels ( Exit key to open the menu, 1 and 7 changes the rssi filter, menu starts the scan and is always select, use keys up and down to scroll up and down) MAY CONTAIN BUGS
