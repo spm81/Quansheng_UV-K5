@@ -22,7 +22,7 @@ A cool achievement
 
 # Matoz Add-ons
 
-F-LOCK PMR = ( Disables TX on all bands except PMR )
+F-LOCK PMR = ( Disables TX on all bands except PMR446 )
 <p float="left">
   <img src="Matozaddon01.jpg" width="300" />
 </p>
