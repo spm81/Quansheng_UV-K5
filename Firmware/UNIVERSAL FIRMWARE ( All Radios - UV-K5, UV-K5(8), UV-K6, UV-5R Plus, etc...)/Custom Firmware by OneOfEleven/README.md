@@ -20,6 +20,12 @@ A cool achievement
   <img src="image5.jpg" width="300" />
 </p><br>
 
+Video showing the AM fix working ..
+
+<video src="AM_fix.mp4"></video>
+
+<video src="https://github.com/OneOfEleven/uv-k5-firmware-custom/assets/51590168/2a3a9cdc-97da-4966-bf0d-1ce6ad09779c"></video>
+
 # Matoz Add-ons
 
 F-LOCK PMR = ( Disables TX on all bands except PMR446 )
