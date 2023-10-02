@@ -9,5 +9,6 @@
 **MCFW V0.07** - Based on Open Spectrum Firmware - New-Menu based on OSFW-f7657ad by Tunas1337 with facgi Spectrum Refactor OSFW-2b7c2dc ( New Menu + Old Style Keys + RSSI SBar + Voltage + Disable Frequency Copy Timeout + Small Bold + improvement in SATCOM reception.)<br>
 **MCFW V0.08** - Based on Open Spectrum Firmware - New-Menu based on OSFW-f7657ad by Tunas1337 with facgi Spectrum Refactor OSFW-9a0be17 ( New Menu + Old Style Keys + RSSI SBar + Voltage + Disable Frequency Copy Timeout + Small Bold + Roger Motorola on Roger Menu + improvement in SATCOM reception.)<br>
 **MCFW V0.09** - Based on Open Spectrum Firmware - New-Menu based on OSFW-f7657ad by Tunas1337 with facgi Spectrum Refactor OSFW-60d0e04 ( Equal to MCFW V0.0.8 but with some fixes)<br>
+**MCFW V0.09a** - Based on Open Spectrum Firmware - New-Menu based on OSFW-f7657ad by Tunas1337 with facgi Spectrum Refactor OSFW-60d0e04 ( Equal to MCFW V0.0.9 but Roger Beep Motorola saves on memory now)<br>
 
 Fagci Spectrum Help (are not the "Old Style Keys" but the rest is equal)
