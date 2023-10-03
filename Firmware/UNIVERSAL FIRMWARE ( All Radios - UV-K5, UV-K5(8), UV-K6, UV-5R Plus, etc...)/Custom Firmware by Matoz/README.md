@@ -1,7 +1,7 @@
 # Custom Firmware by Matoz (MCFW)
 
 
-
+**MCFW V0.12A** - Based on Open Spectrum Firmware - Based on OneofEleven OEFW-8fb9825 with facgi Spectrum Refactor OSFW-fae171f ( FM RADIO Disable + COMPOSER Disable + Added Roger Beep Motorola on the Menu + improvement in SATCOM reception )<br>
 **MCFW V0.11A** - Based on Open Spectrum Firmware - Based on OneofEleven OEFW-84e1745 with facgi Spectrum Refactor OSFW-c5a39e7 ( FM RADIO Disable + Added Roger Beep Motorola on the Menu + improvement in SATCOM reception )<br>
 **MCFW V0.10A** - Based on Open Spectrum Firmware - Based on OneofEleven OEFW-2551077 with facgi Spectrum Refactor OSFW-60d0e04 ( Added Roger Beep Motorola on the Menu + improvement in SATCOM reception )<br><br>
 
