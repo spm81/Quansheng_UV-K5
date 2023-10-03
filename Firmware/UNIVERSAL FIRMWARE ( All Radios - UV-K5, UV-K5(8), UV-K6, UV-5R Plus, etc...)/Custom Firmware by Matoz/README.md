@@ -3,6 +3,8 @@
 
 
 **MCFW V0.11A** - Based on Open Spectrum Firmware - Based on OneofEleven OEFW-84e1745 with facgi Spectrum Refactor OSFW-c5a39e7 ( FM RADIO Disable + Added Roger Beep Motorola on the Menu + improvement in SATCOM reception )<br>
+**MCFW V0.10A** - Based on Open Spectrum Firmware - Based on OneofEleven OEFW-2551077 with facgi Spectrum Refactor OSFW-60d0e04 ( Added Roger Beep Motorola on the Menu + improvement in SATCOM reception )<br><br>
+
 **MCFW V0.09** - Based on Open Spectrum Firmware - New-Menu based on OSFW-f7657ad by Tunas1337 with facgi Spectrum Refactor OSFW-60d0e04 ( Equal to MCFW V0.0.8 but with some fixes)<br>
 **MCFW V0.08** - Based on Open Spectrum Firmware - New-Menu based on OSFW-f7657ad by Tunas1337 with facgi Spectrum Refactor OSFW-9a0be17 ( New Menu + Old Style Keys + RSSI SBar + Voltage + Disable Frequency Copy Timeout + Small Bold + Roger Motorola on Roger Menu + improvement in SATCOM reception.)<br>
 **MCFW V0.07** - Based on Open Spectrum Firmware - New-Menu based on OSFW-f7657ad by Tunas1337 with facgi Spectrum Refactor OSFW-2b7c2dc ( New Menu + Old Style Keys + RSSI SBar + Voltage + Disable Frequency Copy Timeout + Small Bold + improvement in SATCOM reception.)<br>
