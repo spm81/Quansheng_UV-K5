@@ -1,7 +1,7 @@
 # Custom Firmware by Matoz (MCFW)
 * Firmware differences (ONLY ON SPECTRUM (with fagci_style_keys at the end of the file it means it's with Fagci Keys, without fagci_style_keys at the end of the file it means it's an Old Keys Style))
 * A = Based on OneofEleven Firmware
-* B - Based on Tunas1337 Firmware ( Also based on Dual Tachyon Firmware )
+* B = Based on Tunas1337 Firmware ( Also based on Dual Tachyon Firmware )
 
 **MCFW V0.13B** - Based on Open Spectrum Firmware - New-Menu based on OSFW-b7c9ee5 by Tunas1337 with facgi Spectrum Refactor OSFW-fae171f ( FM RADIO Disable + RSSI SBar + Voltage + Disable Frequency Copy Timeout + Small Bold + Roger Motorola on Roger Menu + improvement in SATCOM reception )<br>
 **MCFW V0.13A** - Based on Open Spectrum Firmware - Based on OneofEleven OEFW-9d990f7 with facgi Spectrum Refactor OSFW-fae171f ( FM RADIO Disable + COMPOSER Disable + Added Roger Beep Motorola on the Menu + improvement in SATCOM reception )<br>
