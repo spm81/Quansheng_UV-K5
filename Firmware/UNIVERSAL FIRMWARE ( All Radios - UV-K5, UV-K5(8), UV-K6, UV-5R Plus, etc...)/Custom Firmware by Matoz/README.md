@@ -1,4 +1,5 @@
 # Custom Firmware by Matoz (MCFW)
+* Firmware differences (ONLY ON SPECTRUM (with fagci_style_keys at the end of the file it means it's with Fagci Keys, without fagci_style_keys at the end of the file it means it's an Old Keys Style))
 
 **MCFW V0.13A** - Based on Open Spectrum Firmware - Based on OneofEleven OEFW-9d990f7 with facgi Spectrum Refactor OSFW-fae171f ( FM RADIO Disable + COMPOSER Disable + Added Roger Beep Motorola on the Menu + improvement in SATCOM reception )<br>
 **MCFW V0.12A** - Based on Open Spectrum Firmware - Based on OneofEleven OEFW-8fb9825 with facgi Spectrum Refactor OSFW-fae171f ( FM RADIO Disable + COMPOSER Disable + Added Roger Beep Motorola on the Menu + improvement in SATCOM reception ) * Bug on Spectrum */F Keys on Custom_Firmware_by_Matoz_V0.12A.bin file<br>
