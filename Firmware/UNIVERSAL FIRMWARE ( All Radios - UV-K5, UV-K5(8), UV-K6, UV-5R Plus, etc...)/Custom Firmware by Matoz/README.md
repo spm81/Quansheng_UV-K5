@@ -3,6 +3,7 @@
 * A = Based on OneofEleven Firmware
 * B = Based on Tunas1337 Firmware ( Also based on Dual Tachyon Firmware )
 
+**MCFW V0.15A** - Based on Open Spectrum Firmware - Based on OneofEleven OEFW-1cfb59f with facgi Spectrum Refactor OSFW-1b6a01a ( FM RADIO Disable + VOX Disable + Added Roger Beep Motorola on the Menu + improvement in SATCOM reception + ALL TX)<br>
 **MCFW V0.14A** - Based on Open Spectrum Firmware - Based on OneofEleven OEFW-1cfb59f with facgi Spectrum Refactor OSFW-6193cdd ( FM RADIO Disable + VOX Disable + Added Roger Beep Motorola on the Menu + improvement in SATCOM reception )<br>
 **MCFW V0.13B** - Based on Open Spectrum Firmware - New-Menu based on OSFW-b7c9ee5 by Tunas1337 with facgi Spectrum Refactor OSFW-fae171f ( FM RADIO Disable + RSSI SBar + Voltage + Disable Frequency Copy Timeout + Small Bold + Roger Motorola on Roger Menu + improvement in SATCOM reception )<br>
 **MCFW V0.13A** - Based on Open Spectrum Firmware - Based on OneofEleven OEFW-9d990f7 with facgi Spectrum Refactor OSFW-fae171f ( FM RADIO Disable + COMPOSER Disable + Added Roger Beep Motorola on the Menu + improvement in SATCOM reception )<br>
