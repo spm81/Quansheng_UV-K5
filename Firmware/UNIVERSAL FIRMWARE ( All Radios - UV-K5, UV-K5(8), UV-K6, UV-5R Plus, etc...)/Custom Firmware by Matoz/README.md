@@ -2,6 +2,8 @@
 * Firmware differences (ONLY ON SPECTRUM (with fagci_style_keys at the end of the file it means it's with Fagci Keys, without fagci_style_keys at the end of the file it means it's an Old Keys Style))
 * A = Based on OneofEleven Firmware
 * B = Based on Tunas1337 Firmware ( Also based on Dual Tachyon Firmware )
+* Podes-me encontrar no [Telegram](https://t.me/PMR446PT) (Portuguese Only) !!!<br>
+
 
 **MCFW V0.16A** - Based on Open Spectrum Firmware - Based on OneofEleven OEFW-5c346c8 with facgi Spectrum Refactor OSFW-1b6a01a ( FM RADIO Disable + VOX Disable + Added Roger Beep Motorola on the Menu + improvement in SATCOM reception + ALL TX)<br>
 **MCFW V0.15A** - Based on Open Spectrum Firmware - Based on OneofEleven OEFW-1cfb59f with facgi Spectrum Refactor OSFW-1b6a01a ( FM RADIO Disable + VOX Disable + Added Roger Beep Motorola on the Menu + improvement in SATCOM reception + ALL TX)<br>
