@@ -4,7 +4,8 @@
 * B = Based on Tunas1337 Firmware ( Also based on Dual Tachyon Firmware )
 * Podes-me encontrar no [Telegram](https://t.me/PMR446PT) (Portuguese Only) !!!<br>
 
-**MCFW V0.21BX** - Based on Open Spectrum Firmware - New-Menu based on OSFW-009db0c by Tunas1337  with facgi Spectrum OSFW-4514901 ( FM RADIO Disable + Improvement in SATCOM reception + Secret Menu (Spectrum) + ALL TX )<br>
+**MCFW V0.22B** - Based on Open Spectrum Firmware - New-Menu based on OSFW-009db0c by Tunas1337  with facgi Spectrum OSFW-170f296 ( Improvement in SATCOM reception + Small Bold + Secret Menu (Spectrum) + ALL TX )<br>
+**MCFW V0.21BX** - Based on Open Spectrum Firmware - New-Menu based on OSFW-009db0c by Tunas1337  with facgi Spectrum OSFW-4514901 ( FM RADIO Disable + improvement in SATCOM reception + Secret Menu (Spectrum) + ALL TX )<br>
 **MCFW V0.21B** - Based on Open Spectrum Firmware - New-Menu based on OSFW-009db0c by Tunas1337  with facgi Spectrum OSFW-4514901 ( Improvement in SATCOM reception + ALL TX )<br>
 **MCFW V0.21A** - Based on Open Spectrum Firmware - Based on OneofEleven OEFW-aae4313 with facgi Spectrum OSFW-4514901 ( VOX Disable + improvement in SATCOM reception + ALL TX )<br>
 **MCFW V0.20A** - Based on Open Spectrum Firmware - Based on OneofEleven OEFW-aae4313 with facgi Spectrum OSFW-b7cf3c5 ( FM RADIO Disable + VOX Disable + Added Roger Beep Motorola on the Menu + improvement in SATCOM reception + Secret Menu (Spectrum) )<br>
