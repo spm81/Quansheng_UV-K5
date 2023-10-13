@@ -2,7 +2,7 @@
 * Firmware differences (ONLY ON SPECTRUM (with fagci_style_keys at the end of the file it means it's with Fagci Keys, without fagci_style_keys at the end of the file it means it's an Old Keys Style))
 * A = [Based on OneofEleven Firmware](https://github.com/OneOfEleven/uv-k5-firmware-custom)
 * B = [Based on Tunas1337 Firmware ( Also based on Dual Tachyon Firmware ) **(Best for SATCOM)**](https://github.com/Tunas1337/uv-k5-firmware)
-* C = [Based on Fagci Firmware ( Also based on Dual Tachyon Firmware ) **(Best for SATCOM)**}(https://github.com/fagci/uv-k5-firmware-fagci-mod)
+* C = [Based on Fagci Firmware ( Also based on Dual Tachyon Firmware ) **(Best for SATCOM)**](https://github.com/fagci/uv-k5-firmware-fagci-mod)
 
 * Podes-me encontrar no [Telegram](https://t.me/PMR446PT) (Portuguese Only) !!!<br>
 
