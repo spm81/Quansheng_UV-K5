@@ -3,7 +3,7 @@ Firmware_IJV_1.07a has MODE FM AM USB
 Firmware_IJV_1.10b has MODE FM AM SSB
 
 
-**Firmware_IJV_1.10b Keybord**
+**Firmware_IJV_1.10b Keybord**<br>
 [**Português**]
 
 Pressione longamente as teclas
