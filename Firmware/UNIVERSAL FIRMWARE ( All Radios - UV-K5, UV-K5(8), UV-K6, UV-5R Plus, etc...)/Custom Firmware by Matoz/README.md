@@ -6,6 +6,7 @@
 
 * Podes-me encontrar no [Telegram](https://t.me/PMR446PT) (Portuguese Only) !!!<br>
 
+**MCFW V0.26A** - Based on Open Spectrum Firmware - Based on OneofEleven OEFW-4f6063f with facgi Spectrum OSFW-f11b9e1 ( FM RADIO Disable + VOX Disable + Flashlight SOS function + **Real** improvement in SATCOM reception + ALL TX )<br>
 **MCFW V0.25A** - Based on Open Spectrum Firmware - Based on OneofEleven OEFW-4172e6b with facgi Spectrum OSFW-bd90ca3 ( FM RADIO Disable + VOX Disable + Added Roger Beep Motorola on the Menu + Flashlight SOS function + More Steps + **Real** improvement in SATCOM reception + ALL TX + (Lower Power on Low and Medium ))<br>
 **MCFW V0.24A** - Based on Open Spectrum Firmware - Based on OneofEleven OEFW-73572f2 with facgi Spectrum OSFW-c0ca69e ( FM RADIO Disable + VOX Disable + Added Roger Beep Motorola on the Menu + Flashlight SOS function + More Steps + **Real** improvement in SATCOM reception + (Lower Power on Low and Medium ))<br>
 **MCFW V0.23A** - Based on Open Spectrum Firmware - Based on OneofEleven OEFW-ca78b74 with facgi Spectrum OSFW-c0ca69e ( FM RADIO Disable + VOX Disable + Added Roger Beep Motorola on the Menu + **Real** improvement in SATCOM reception )<br>
