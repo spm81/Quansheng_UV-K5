@@ -4,7 +4,7 @@
 * B = [Based on Tunas1337 Firmware ( Also based on Dual Tachyon Firmware ) **(Best for SATCOM)**](https://github.com/Tunas1337/uv-k5-firmware)
 * C = [Based on Fagci Firmware ( Also based on Dual Tachyon Firmware ) **(Best for SATCOM)**](https://github.com/fagci/uv-k5-firmware-fagci-mod)
 
-* Podes-me encontrar no [Telegram](https://t.me/PMR446PT) (Portuguese Only) !!!<br>
+* Podes-me encontrar no [Telegram](https://t.me/PMR446PT) (Portuguese Only) !!!<br><br>
 **MCFW V0.28C** - Based on Open Spectrum Firmware - Facgi Spectrum OSFW-73bdc95 ( Bold Font + Improvement in SATCOM reception + ALL TX ) **( Introducing AM + FM + SSB + BYP + RAW by pressing F+7)**
 **MCFW V0.27C** - Based on Open Spectrum Firmware - Facgi Spectrum OSFW-5a1597c ( Improvement in SATCOM reception + ALL TX ) **( Introducing AM + FM + SSB + RAW by pressing F+7)**
 **MCFW V0.26A** - Based on Open Spectrum Firmware - Based on OneofEleven OEFW-4f6063f with facgi Spectrum OSFW-f11b9e1 ( FM RADIO Disable + VOX Disable + Flashlight SOS function + **Real** improvement in SATCOM reception + ALL TX )<br>
