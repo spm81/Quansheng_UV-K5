@@ -6,7 +6,7 @@
 
 * Podes-me encontrar no [Telegram](https://t.me/PMR446PT) (Portuguese Only) !!!<br><br>
 
-**MCFW V0.29.1C** - Based on Open Spectrum Firmware - Facgi Spectrum OSFW-bc9a456 ( Improvement on SQL (Thanks to **SP4UBW **) + Flashlight SOS function + Improvement in SATCOM reception + Small Bold + ALL TX ) <br>
+**MCFW V0.29.1C** - Based on Open Spectrum Firmware - Facgi Spectrum OSFW-bc9a456 ( Improvement on SQL ( Thanks to **SP4UBW** ) + Flashlight SOS function + Improvement in SATCOM reception + Small Bold + ALL TX ) <br>
 **MCFW V0.29C** - Based on Open Spectrum Firmware - Facgi Spectrum OSFW-bc9a456 ( Improvement in SATCOM reception + Small Bold + ALL TX ) <br>
 **MCFW V0.29A** - Based on Open Spectrum Firmware - Based on OneofEleven OEFW-024c4bb with facgi Spectrum OSFW-bc9a456 ( FM RADIO Disable + VOX Disable + Flashlight SOS function + **Real** improvement in SATCOM reception )<br>
 
