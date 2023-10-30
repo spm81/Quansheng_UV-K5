@@ -6,6 +6,7 @@
 
 * Podes-me encontrar no [Telegram](https://t.me/PMR446PT) (Portuguese Only) !!!<br><br>
 
+**MCFW V0.31.1C** - Based on Open Spectrum Firmware - Facgi Spectrum OSFW-c8ae8a5 ( Disable FM Radio + Added Roger Beep Motorola on the Menu + Improvement on SQL ( Thanks to **SP4UBW** ) + Flashlight SOS function + Improvement in SATCOM reception + Secret Menu (Spectrum) + ALL TX ) <br>
 **MCFW V0.31C** - Based on Open Spectrum Firmware - Facgi Spectrum OSFW-c8ae8a5 ( Improvement on SQL ( Thanks to **SP4UBW** ) + Flashlight SOS function + Improvement in SATCOM reception + ALL TX ) <br>
 
 **MCFW V0.30C** - Based on Open Spectrum Firmware - Facgi Spectrum OSFW-f95df07 ( Improvement on SQL ( Thanks to **SP4UBW** ) + Flashlight SOS function + Improvement in SATCOM reception + ALL TX ) <br>
