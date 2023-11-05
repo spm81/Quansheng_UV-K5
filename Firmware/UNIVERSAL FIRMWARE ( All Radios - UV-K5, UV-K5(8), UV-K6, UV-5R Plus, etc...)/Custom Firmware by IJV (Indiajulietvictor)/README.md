@@ -51,3 +51,19 @@ Tasto 9 seleziona step sintonia
 Tasto 0 radio fm broadcasting 
 Tasto * scansione 
 Tasto F blocco tastiera
+
+
+
+**firmware_IJV_1.18_R12 Keybord**<br>
+
+Long press keys 
+Key 1 changes the band in vfo mode 
+Key 2 selects band A or band B 
+Key 3 VFO or memory mode button 
+Key 4 functions as CTC/DCS tone search 
+Key 5 changes [N] [N-] [W] [W+] 
+Key 6 power selection H L M 
+Key 7 sets bank1 or bank2 for the memory channel 
+Key 8 reverses Rx freq and Tx freq 
+Key 9 selects tuning step 
+Key 0 FM radio broadcasting Key '*' Scan key Key F lock keyboard
