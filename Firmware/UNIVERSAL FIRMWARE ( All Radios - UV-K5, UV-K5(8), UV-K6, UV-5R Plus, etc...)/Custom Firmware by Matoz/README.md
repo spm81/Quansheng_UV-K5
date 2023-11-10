@@ -4,12 +4,16 @@
 * B = [Based on Tunas1337 Firmware ( Also based on Dual Tachyon Firmware ) **(Best for SATCOM)**](https://github.com/Tunas1337/uv-k5-firmware)
 * C = [Based on Fagci Firmware ( Also based on Dual Tachyon Firmware ) **(Best for SATCOM)**](https://github.com/fagci/uv-k5-firmware-fagci-mod)
 
+* Improvement on SQL ( Thanks to **SP4UBW** )
+
 * Podes-me encontrar no [Telegram](https://t.me/PMR446PT) (Portuguese Only) !!!<br><br>
 
-**MCFW V0.31.1C** - Based on Open Spectrum Firmware - Facgi Spectrum OSFW-c8ae8a5 ( Disable FM Radio + Added Roger Beep Motorola on the Menu + Improvement on SQL ( Thanks to **SP4UBW** ) + Flashlight SOS function + Improvement in SATCOM reception + Secret Menu (Spectrum) + ALL TX ) <br>
-**MCFW V0.31C** - Based on Open Spectrum Firmware - Facgi Spectrum OSFW-c8ae8a5 ( Improvement on SQL ( Thanks to **SP4UBW** ) + Flashlight SOS function + Improvement in SATCOM reception + ALL TX ) <br>
+**MCFW V0.31.3C** - Based on Open Spectrum Firmware - Facgi Spectrum OSFW-c8ae8a5 ( Disable FM Radio + Added Roger Beep Motorola on the Menu + Improvement on SQL + Flashlight SOS function + Improvement in SATCOM reception + Secret Menu (Spectrum) + Upconverter shift + ALL TX ) <br>
+**MCFW V0.31.2C** - Based on Open Spectrum Firmware - Facgi Spectrum OSFW-c8ae8a5 ( Added Roger Beep Motorola on the Menu + Improvement on SQL + Flashlight SOS function + Improvement in SATCOM reception + Upconverter shift + ALL TX ) <br>
+**MCFW V0.31.1C** - Based on Open Spectrum Firmware - Facgi Spectrum OSFW-c8ae8a5 ( Disable FM Radio + Added Roger Beep Motorola on the Menu + Improvement on SQL + Flashlight SOS function + Improvement in SATCOM reception + Secret Menu (Spectrum) + ALL TX ) <br>
+**MCFW V0.31C** - Based on Open Spectrum Firmware - Facgi Spectrum OSFW-c8ae8a5 ( Improvement on SQL + Flashlight SOS function + Improvement in SATCOM reception + ALL TX ) <br>
 
-**MCFW V0.30C** - Based on Open Spectrum Firmware - Facgi Spectrum OSFW-f95df07 ( Improvement on SQL ( Thanks to **SP4UBW** ) + Flashlight SOS function + Improvement in SATCOM reception + ALL TX ) <br>
+**MCFW V0.30C** - Based on Open Spectrum Firmware - Facgi Spectrum OSFW-f95df07 ( Improvement on SQL + Flashlight SOS function + Improvement in SATCOM reception + ALL TX ) <br>
 
 **MCFW V0.29.1C** - Based on Open Spectrum Firmware - Facgi Spectrum OSFW-bc9a456 ( Improvement on SQL ( Thanks to **SP4UBW** ) + Flashlight SOS function + Improvement in SATCOM reception + Small Bold + ALL TX ) <br>
 **MCFW V0.29C** - Based on Open Spectrum Firmware - Facgi Spectrum OSFW-bc9a456 ( Improvement in SATCOM reception + Small Bold + ALL TX ) <br>
