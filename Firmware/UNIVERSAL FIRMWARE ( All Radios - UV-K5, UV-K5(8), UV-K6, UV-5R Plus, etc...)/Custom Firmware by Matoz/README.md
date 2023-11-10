@@ -8,7 +8,8 @@
 
 * Podes-me encontrar no [Telegram](https://t.me/PMR446PT) (Portuguese Only) !!!<br><br>
 
-**MCFW V0.31.5C** - Based on Open Spectrum Firmware - Facgi Spectrum OSFW-c8ae8a5 ( Same as MCFW V0.31.2C, but with power transmitter calibration (Low= 0.49W Mid= 2.5W Hi= 4.95W), applied to frequencies 137 MHz to 173.990 MHz and 400 MHz to 469.990 MHz. Need Password: 123400) <br>
+**MCFW V0.31.6C** - Based on Open Spectrum Firmware - Facgi Spectrum OSFW-c8ae8a5 ( Same as MCFW V0.31.2C, but with power transmitter calibration (Low= 0.49W Mid= 2.5W Hi= 4.95W), applied to frequencies 137 MHz to 173.990 MHz and 400 MHz to 469.990 MHz. Need Password: 123400) <br>
+**MCFW V0.31.5C** - Based on Open Spectrum Firmware - Facgi Spectrum OSFW-c8ae8a5 ( Same as MCFW V0.31.2C, but with power transmitter calibration (Low= 0.49W Mid= 2.5W Hi= 4.95W), applied to frequencies 137 MHz to 173.990 MHz and 400 MHz to 469.990 MHz. Need Password: 123400 **Values where not correct, please upload V0.31.6C**) <br>
 **MCFW V0.31.3C** - Based on Open Spectrum Firmware - Facgi Spectrum OSFW-c8ae8a5 ( Disable FM Radio + Added Roger Beep Motorola on the Menu + Improvement on SQL + Flashlight SOS function + Improvement in SATCOM reception + Secret Menu (Spectrum) + Upconverter shift + ALL TX ) <br>
 **MCFW V0.31.2C** - Based on Open Spectrum Firmware - Facgi Spectrum OSFW-c8ae8a5 ( Added Roger Beep Motorola on the Menu + Improvement on SQL + Flashlight SOS function + Improvement in SATCOM reception + Upconverter shift + ALL TX ) <br>
 **MCFW V0.31.1C** - Based on Open Spectrum Firmware - Facgi Spectrum OSFW-c8ae8a5 ( Disable FM Radio + Added Roger Beep Motorola on the Menu + Improvement on SQL + Flashlight SOS function + Improvement in SATCOM reception + Secret Menu (Spectrum) + ALL TX ) <br>
