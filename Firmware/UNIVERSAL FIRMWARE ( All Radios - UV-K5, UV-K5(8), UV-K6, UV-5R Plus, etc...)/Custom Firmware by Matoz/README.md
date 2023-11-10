@@ -10,9 +10,9 @@
 
 
 **MCFW V0.31.6C** - Based on Open Spectrum Firmware - Facgi Spectrum OSFW-c8ae8a5 ( Same as MCFW V0.31.2C, but with power transmitter calibration (Low= 0.49W Mid= 2.5W Hi= 4.95W) Please Backup your Configuration first with [k5prog_win.exe](https://github.com/spm81/Quansheng_UV-K5/blob/main/Software/k5prog_win.exe) if you want to go back to your default configuration
-, applied to frequencies 137 MHz to 173.990 MHz and 400 MHz to 469.990 MHz. Need Password: 123400) <br>
+, applied to frequencies 137 MHz to 173.990 MHz and 400 MHz to 469.990 MHz. Need Password to apply the calibration: 123400) <br>
 **MCFW V0.31.5C** - Based on Open Spectrum Firmware - Facgi Spectrum OSFW-c8ae8a5 ( Same as MCFW V0.31.2C, but with power transmitter calibration (Low= 0.49W Mid= 2.5W Hi= 4.95W) Please Backup your Configuration first with [k5prog_win.exe](https://github.com/spm81/Quansheng_UV-K5/blob/main/Software/k5prog_win.exe) if you want to go back to your default configuration
-, applied to frequencies 137 MHz to 173.990 MHz and 400 MHz to 469.990 MHz. Need Password: 123400 **Values where not correct, please upload V0.31.6C**) <br>
+, applied to frequencies 137 MHz to 173.990 MHz and 400 MHz to 469.990 MHz. Need Password to apply the calibration: 123400 **Values where not correct, please upload V0.31.6C**) <br>
 **MCFW V0.31.3C** - Based on Open Spectrum Firmware - Facgi Spectrum OSFW-c8ae8a5 ( Disable FM Radio + Added Roger Beep Motorola on the Menu + Improvement on SQL + Flashlight SOS function + Improvement in SATCOM reception + Secret Menu (Spectrum) + Upconverter shift + ALL TX ) <br>
 **MCFW V0.31.2C** - Based on Open Spectrum Firmware - Facgi Spectrum OSFW-c8ae8a5 ( Added Roger Beep Motorola on the Menu + Improvement on SQL + Flashlight SOS function + Improvement in SATCOM reception + Upconverter shift + ALL TX ) <br>
 **MCFW V0.31.1C** - Based on Open Spectrum Firmware - Facgi Spectrum OSFW-c8ae8a5 ( Disable FM Radio + Added Roger Beep Motorola on the Menu + Improvement on SQL + Flashlight SOS function + Improvement in SATCOM reception + Secret Menu (Spectrum) + ALL TX ) <br>
