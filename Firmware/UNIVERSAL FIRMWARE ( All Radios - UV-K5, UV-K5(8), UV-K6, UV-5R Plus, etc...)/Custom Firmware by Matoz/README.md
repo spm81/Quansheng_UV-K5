@@ -3,6 +3,7 @@
 * A = [Based on OneofEleven Firmware **(Best for SATCOM ONLY From V0.23A)**](https://github.com/OneOfEleven/uv-k5-firmware-custom)
 * B = [Based on Tunas1337 Firmware ( Also based on Dual Tachyon Firmware ) **(Best for SATCOM)**](https://github.com/Tunas1337/uv-k5-firmware)
 * C = [Based on Fagci Firmware ( Also based on Dual Tachyon Firmware ) **(Best for SATCOM)**](https://github.com/fagci/uv-k5-firmware-fagci-mod)
+* CAL = Only for Calibrate your radio
 
 * Improvement on SQL ( Thanks to **SP4UBW** )<br>
 * Podes-me encontrar no [Telegram](https://t.me/PMR446PT) (Portuguese Only) !!!<br><br>
