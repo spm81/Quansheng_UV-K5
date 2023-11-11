@@ -8,6 +8,8 @@
 * Improvement on SQL ( Thanks to **SP4UBW** )<br>
 * Podes-me encontrar no [Telegram](https://t.me/PMR446PT) (Portuguese Only) !!!<br><br>
 
+**MCFW V0.02 CAL** - Power transmitter calibration (Hi= 5W) applied to frequencies 174MHz to 349.990 MHz (SATCOM) + (Low= 0.49W Mid= 2.5W Hi= 4.95W) applied to frequencies 137 MHz to 173.990 MHz and 400 MHz to 469.990 MHz. Please Backup your Configuration first with [k5prog_win.exe](https://github.com/spm81/Quansheng_UV-K5/blob/main/Software/k5prog_win.exe) if you want to go back to your default configuration
+, Need Password to apply the calibration: 123400)
 **MCFW V0.01 CAL** - Power transmitter calibration (Low= 0.49W Mid= 2.5W Hi= 4.95W) applied to frequencies 137 MHz to 173.990 MHz and 400 MHz to 469.990 MHz. Please Backup your Configuration first with [k5prog_win.exe](https://github.com/spm81/Quansheng_UV-K5/blob/main/Software/k5prog_win.exe) if you want to go back to your default configuration
 , Need Password to apply the calibration: 123400)
 
