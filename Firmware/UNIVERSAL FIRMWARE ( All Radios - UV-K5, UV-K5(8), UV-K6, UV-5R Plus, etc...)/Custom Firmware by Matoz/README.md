@@ -7,7 +7,8 @@
 * Improvement on SQL ( Thanks to **SP4UBW** )<br>
 * Podes-me encontrar no [Telegram](https://t.me/PMR446PT) (Portuguese Only) !!!<br><br>
 
-
+**MCFW V0.01 CAL** - Power transmitter calibration (Low= 0.49W Mid= 2.5W Hi= 4.95W) applied to frequencies 137 MHz to 173.990 MHz and 400 MHz to 469.990 MHz. Please Backup your Configuration first with [k5prog_win.exe](https://github.com/spm81/Quansheng_UV-K5/blob/main/Software/k5prog_win.exe) if you want to go back to your default configuration
+, Need Password to apply the calibration: 123400)
 
 **MCFW V0.31.6C** - Based on Open Spectrum Firmware - Facgi Spectrum OSFW-c8ae8a5 ( Same as MCFW V0.31.2C, but with power transmitter calibration (Low= 0.49W Mid= 2.5W Hi= 4.95W) Please Backup your Configuration first with [k5prog_win.exe](https://github.com/spm81/Quansheng_UV-K5/blob/main/Software/k5prog_win.exe) if you want to go back to your default configuration
 , applied to frequencies 137 MHz to 173.990 MHz and 400 MHz to 469.990 MHz. Need Password to apply the calibration: 123400) <br>
