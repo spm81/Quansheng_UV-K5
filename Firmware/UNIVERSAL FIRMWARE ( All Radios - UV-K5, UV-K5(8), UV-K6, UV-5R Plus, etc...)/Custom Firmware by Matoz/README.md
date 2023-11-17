@@ -9,7 +9,7 @@
 * Podes-me encontrar no [Telegram](https://t.me/PMR446PT) (Portuguese Only) !!!<br><br>
 
 
-# MCFW V1.0 CAL
+# MCFW V1.0 CAL ( Soon )
 
 <p float="left">
   <img src="Pictures/MCFWV1.0CAL.png" />
