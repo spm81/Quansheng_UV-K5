@@ -22,6 +22,8 @@
 * Improvement on SQL ( Thanks to **SP4UBW** )<br>
 * Podes-me encontrar no [Telegram](https://t.me/PMR446PT) (Portuguese Only) !!!<br><br>
 
+**MCFW V0.31.5C** - Based on Open Spectrum Firmware - Facgi Spectrum OSFW-c8ae8a5 ( Disable FM Radio + Fast Scan like 1of11 + Added Roger Beep Motorola on the Menu + Improvement on SQL (better) + Flashlight SOS function + Improvement in SATCOM reception + Secret Menu (Spectrum) + Upconverter shift (more frequencies) + ALL TX ) <br>
+**MCFW V0.31.4C** - Based on Open Spectrum Firmware - Facgi Spectrum OSFW-c8ae8a5 ( Fast Scan like 1of11Added Roger Beep Motorola on the Menu + Improvement on SQL (better) + Flashlight SOS function + Improvement in SATCOM reception + Upconverter shift (more frequencies) + ALL TX ) <br>
 **MCFW V0.31.3C** - Based on Open Spectrum Firmware - Facgi Spectrum OSFW-c8ae8a5 ( Disable FM Radio + Added Roger Beep Motorola on the Menu + Improvement on SQL + Flashlight SOS function + Improvement in SATCOM reception + Secret Menu (Spectrum) + Upconverter shift + ALL TX ) <br>
 **MCFW V0.31.2C** - Based on Open Spectrum Firmware - Facgi Spectrum OSFW-c8ae8a5 ( Added Roger Beep Motorola on the Menu + Improvement on SQL + Flashlight SOS function + Improvement in SATCOM reception + Upconverter shift + ALL TX ) <br>
 **MCFW V0.31.1C** - Based on Open Spectrum Firmware - Facgi Spectrum OSFW-c8ae8a5 ( Disable FM Radio + Added Roger Beep Motorola on the Menu + Improvement on SQL + Flashlight SOS function + Improvement in SATCOM reception + Secret Menu (Spectrum) + ALL TX ) <br>
