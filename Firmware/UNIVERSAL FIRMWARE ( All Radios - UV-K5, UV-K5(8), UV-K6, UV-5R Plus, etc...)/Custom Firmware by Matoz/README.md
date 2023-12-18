@@ -20,8 +20,11 @@
 * CAL = Only for Calibrate your radio
 
 * Improvement on SQL ( Thanks to **SP4UBW** )<br>
+* Appearance of memorized channels in the spectrum ( Thanks to **joaquimorg** )<br>
 * Podes-me encontrar no [Telegram](https://t.me/PMR446PT) (Portuguese Only) !!!<br><br>
 
+**MCFW V0.32.0C** - Based on MCFW V0.31.xC ( With good improvement on SQL + SList Editor )
+					( FM Radio Version / Spectrum All Registers Secret Menu Version )
 
 **MCFW V0.31.9C** - Based on Open Spectrum Firmware - Facgi Spectrum OSFW-c8ae8a5 ( Disable FM Radio + AM Fix + appearance of memorized channels in the spectrum ( Thanks to **joaquimorg** ) + Scan All Scan List 1+2 together + 2nd ToneBurst 1750Hz and 1050Hz = PTT + Sidekey 1, PTT + Sidekey 2 + Fast Scan like 1of11 + Added Roger Beep Motorola on the Menu + Improvement on SQL (better) + Flashlight SOS function + Improvement in SATCOM reception + Secret Menu (Spectrum) + Upconverter shift (more frequencies) + ALL TX ) <br>
 **MCFW V0.31.8C** - Based on Open Spectrum Firmware - Facgi Spectrum OSFW-c8ae8a5 ( AM Fix + appearance of memorized channels in the spectrum ( Thanks to **joaquimorg** ) + Scan All Scan List 1+2 together + 2nd ToneBurst 1750Hz and 1050Hz = PTT + Sidekey 1, PTT + Sidekey 2 + Fast Scan like 1of11 + Added Roger Beep Motorola on the Menu + Improvement on SQL (better) + Flashlight SOS function + Improvement in SATCOM reception + Upconverter shift (more frequencies) + ALL TX ) <br>
