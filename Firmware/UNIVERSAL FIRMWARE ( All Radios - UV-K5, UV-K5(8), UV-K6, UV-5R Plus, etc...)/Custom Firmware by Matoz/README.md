@@ -26,7 +26,7 @@
 **MCFW V0.32.0C** - Based on MCFW V0.31.xC ( With good improvement on SQL + SList Editor )<br>
 					* FM Radio Version <br>
 					* Spectrum All Registers Secret Menu Version <br>
-					* Messenger Version ( Thanks to [**joaquimorg**](https://github.com/joaquimorg) ) <br>
+					* Messenger Version ( Thanks to [**joaquimorg**](https://github.com/joaquimorg)  for recovering Messenger originally from @piotr022 ) <br>
 					* Messenger + FM Radio - NO Spectrum App
 
 **MCFW V0.31.9C** - Based on Open Spectrum Firmware - Facgi Spectrum OSFW-c8ae8a5 ( Disable FM Radio + AM Fix + appearance of memorized channels in the spectrum ( Thanks to **joaquimorg** ) + Scan All Scan List 1+2 together + 2nd ToneBurst 1750Hz and 1050Hz = PTT + Sidekey 1, PTT + Sidekey 2 + Fast Scan like 1of11 + Added Roger Beep Motorola on the Menu + Improvement on SQL (better) + Flashlight SOS function + Improvement in SATCOM reception + Secret Menu (Spectrum) + Upconverter shift (more frequencies) + ALL TX ) <br>
