@@ -21,7 +21,9 @@
 
 * Improvement on SQL ( Thanks to **SP4UBW** )<br>
 * Appearance of memorized channels in the spectrum ( Thanks to [**joaquimorg**](https://github.com/joaquimorg) )<br>
-* Podes-me encontrar no [Telegram](https://t.me/PMR446PT) (Portuguese Only) !!!<br><br>
+* Podes-me encontrar no [Telegram](https://t.me/PMR446PT) (Portuguese Only) !!!<br>
+* **Feel free to improve my firmware** - [Here is my Source Code of MCFW](https://github.com/spm81/MCFW_UV-K5_Open_Source_Firmware)<br><br>
+
 
 **MCFW V0.32.0C** - Based on MCFW V0.31.xC ( With good improvement on SQL + SList Editor )<br>
 					* FM Radio Version <br>
