@@ -21,9 +21,31 @@
 
 * Improvement on SQL ( Thanks to **SP4UBW** )<br>
 * Appearance of memorized channels in the spectrum ( Thanks to [**joaquimorg**](https://github.com/joaquimorg) )<br>
+* Thanks to [**joaquimorg**](https://github.com/joaquimorg)  for recovering Messenger originally from @piotr022 and improving it a lot.<br>
 * Podes-me encontrar no [Telegram](https://t.me/PMR446PT) (Portuguese Only) !!!<br>
 * **Feel free to improve my firmware** - [Here is my Source Code of MCFW](https://github.com/spm81/MCFW_UV-K5_Open_Source_Firmware)<br><br>
 
+<p float="left">
+  <img src="Pictures/UV-K5-keypad-T9.jpg" />
+</p>
+
+Keys :<br>
+
+* "*" - Change keyboard, Upper case, Lower case, Numeric.<br>
+* "0" - Space, except in numeric mode.<br>
+* "F" - Backspace.<br>
+* "(Long press) F" - Clear all messages.<br>
+* "UP" - Recalls last sent message.<br>
+* "M" - Transmits message in the frequency of active VFO.<br>
+* "Exit" - Close application.<br><br>
+
+<p float="left">
+  <img src="Pictures/comingsoon.gif" />
+</p>
+
+**MCFW V0.33.0C** - Based on MCFW V0.31.xC ( With better improvement on SQL and DTMF Disabled )<br>
+					* Normal LCD - Six Roger Beeps + FM Radio + Spectrum + SList Editor + Spectrum + Messenger Version<br>
+     					* Inverted LCD - Six Roger Beeps + FM Radio + Spectrum + SList Editor + Spectrum + Messenger Version
 
 **MCFW V0.32.0C** - Based on MCFW V0.31.xC ( With good improvement on SQL + SList Editor )<br>
 					* FM Radio Version <br>
