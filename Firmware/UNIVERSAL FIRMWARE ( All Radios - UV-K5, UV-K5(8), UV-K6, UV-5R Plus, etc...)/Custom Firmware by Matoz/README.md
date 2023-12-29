@@ -39,14 +39,11 @@
    "Exit" - Close application.<br><br>
 
 
-<img align="left" width="360" src="Pictures/comingsoon.gif" />
-
-# Coming Soon 
-**MCFW V0.33.0C** - Based on MCFW V0.31.xC ( With better improvement on SQL and DTMF Disabled )<br><br>
-**NEW on this Firmware** : Normal Screen or Negative Screen Versions + Better improvement on SQL then last version + TX RSSI Bar + Messenger with audible notification of message reception by the receiver and visual notification in case of message received on VFO + Six Rogers Beeps + battery percentage, you need to go to the MENU to choose your battery if it is 1600mAh or 2200mAh<br>
+**MCFW V0.33.0C** - Based on MCFW V0.31.xC ( With better improvement on SQL and DTMF Disabled )<br>
+**NEW on this Firmware** : Normal Screen or Negative Screen Versions + Better improvement on SQL then last version + TX RSSI Bar + Messenger with audible notification of message reception by the receiver and visual notification in case of message received on VFO + Six Rogers Beeps + Battery percentage, you need to go to the MENU to choose your battery if it is 1600mAh or 2200mAh<br>
 					**Version:**<br>
-     						* Messenger + Six Roger Beeps + FM Radio + Spectrum + SList Editor
-
+     						* Messenger + Six Roger Beeps + FM Radio + Spectrum + SList Editor + TX RSSI Bar + Battery percentage
+	   
 **MCFW V0.32.0C** - Based on MCFW V0.31.xC ( With good improvement on SQL + SList Editor )<br>
 					* FM Radio Version <br>
 					* Spectrum All Registers Secret Menu Version <br>
