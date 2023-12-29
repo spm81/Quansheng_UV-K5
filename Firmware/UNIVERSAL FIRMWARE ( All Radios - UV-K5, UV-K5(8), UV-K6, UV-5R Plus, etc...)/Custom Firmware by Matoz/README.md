@@ -12,8 +12,10 @@
 **MCFW V0.01 CAL** - Power transmitter calibration (Low= 0.49W Mid= 2.5W Hi= 4.95W) applied to frequencies 137 MHz to 173.990 MHz and 400 MHz to 469.990 MHz. Please Backup your Configuration first with [k5prog_win.exe](https://github.com/spm81/Quansheng_UV-K5/blob/main/Software/k5prog_win.exe) if you want to go back to your default configuration
 , Need Password to apply the calibration: 123400)<br>
 
-<img align="center" width="530" src="Pictures/MCFW_Firmware_Logo.jpg" />
+
 # Custom Firmware by Matoz (MCFW) - Info:
+<img align="center" width="530" src="Pictures/MCFW_Firmware_Logo.jpg" />
+
 * Firmware differences (ONLY ON SPECTRUM (with fagci_style_keys at the end of the file it means it's with Fagci Keys, without fagci_style_keys at the end of the file it means it's an Old Keys Style))
 * A = [Based on OneofEleven Firmware **(Best for SATCOM ONLY From V0.23A)**](https://github.com/OneOfEleven/uv-k5-firmware-custom)
 * B = [Based on Tunas1337 Firmware ( Also based on Dual Tachyon Firmware ) **(Best for SATCOM)**](https://github.com/Tunas1337/uv-k5-firmware)
@@ -41,7 +43,7 @@
 
 # Coming Soon 
 **MCFW V0.33.0C** - Based on MCFW V0.31.xC ( With better improvement on SQL and DTMF Disabled )<br><br>
-**NEW on this Firmware** : Normal screen or Negative screen Versions + Messenger with audible notification of message reception by the receiver and visual notification in case of message received on VFO + Six Rogers Beeps + battery percentage, you need to go to the MENU to choose your battery if it is 1600mAh or 2200mAh<br>
+**NEW on this Firmware** : Normal Screen or Negative Screen Versions + Better improvement on SQL then last version + TX RSSI Bar + Messenger with audible notification of message reception by the receiver and visual notification in case of message received on VFO + Six Rogers Beeps + battery percentage, you need to go to the MENU to choose your battery if it is 1600mAh or 2200mAh<br>
 					**Version:**<br>
      						* Messenger + Six Roger Beeps + FM Radio + Spectrum + SList Editor
 
