@@ -40,8 +40,9 @@
 
 # Coming Soon 
 **MCFW V0.33.0C** - Based on MCFW V0.31.xC ( With better improvement on SQL and DTMF Disabled )<br><br>
-					* Normal LCD - Messenger +Six Roger Beeps + FM Radio + Spectrum + SList Editor<br>
-     					* Inverted LCD - Messenger +Six Roger Beeps + FM Radio + Spectrum + SList Editor
+**NEW on this Firmware** : Normal screen or Negative screen Versions + Messenger with audible notification of message reception by the receiver and visual notification in case of message received on VFO + Six Rogers Beeps + battery percentage, you need to go to the MENU to choose your battery if it is 1600mAh or 2200mAh<br>
+					**Version:**<br>
+     						* Messenger + Six Roger Beeps + FM Radio + Spectrum + SList Editor
 
 **MCFW V0.32.0C** - Based on MCFW V0.31.xC ( With good improvement on SQL + SList Editor )<br>
 					* FM Radio Version <br>
