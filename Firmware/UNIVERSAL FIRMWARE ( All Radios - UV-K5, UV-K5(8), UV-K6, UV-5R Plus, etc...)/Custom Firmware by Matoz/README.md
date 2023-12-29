@@ -1,6 +1,6 @@
 * Podes-me encontrar no [Telegram](https://t.me/PMR446PT) (Portuguese Only) !!!<br>
 
-# Tunning Firmwares by Matoz
+# Tunning Firmwares by Matoz - Info:
 
 **MCFW V1.0 CAL** ( Password to apply: 123400 )
 <p float="left">
@@ -12,7 +12,7 @@
 **MCFW V0.01 CAL** - Power transmitter calibration (Low= 0.49W Mid= 2.5W Hi= 4.95W) applied to frequencies 137 MHz to 173.990 MHz and 400 MHz to 469.990 MHz. Please Backup your Configuration first with [k5prog_win.exe](https://github.com/spm81/Quansheng_UV-K5/blob/main/Software/k5prog_win.exe) if you want to go back to your default configuration
 , Need Password to apply the calibration: 123400)<br>
 
-# Custom Firmware by Matoz (MCFW)
+# Custom Firmware by Matoz (MCFW) - Info:
 * Firmware differences (ONLY ON SPECTRUM (with fagci_style_keys at the end of the file it means it's with Fagci Keys, without fagci_style_keys at the end of the file it means it's an Old Keys Style))
 * A = [Based on OneofEleven Firmware **(Best for SATCOM ONLY From V0.23A)**](https://github.com/OneOfEleven/uv-k5-firmware-custom)
 * B = [Based on Tunas1337 Firmware ( Also based on Dual Tachyon Firmware ) **(Best for SATCOM)**](https://github.com/Tunas1337/uv-k5-firmware)
@@ -20,32 +20,29 @@
 * CAL = Only for Calibrate your radio
 
 * Improvement on SQL ( Thanks to **SP4UBW** )<br>
-* Appearance of memorized channels in the spectrum ( Thanks to [**joaquimorg**](https://github.com/joaquimorg) )<br>
-* Thanks to [**joaquimorg**](https://github.com/joaquimorg)  for recovering Messenger originally from @piotr022 and improving it a lot.<br>
+* Thanks to [**joaquimorg**](https://github.com/joaquimorg)  for recovering Messenger originally from @piotr022 and improving it a lot also for the appearance of memorized channels in the spectrum.<br>
 * Podes-me encontrar no [Telegram](https://t.me/PMR446PT) (Portuguese Only) !!!<br>
 * **Feel free to improve my firmware** - [Here is my Source Code of MCFW](https://github.com/spm81/MCFW_UV-K5_Open_Source_Firmware)<br><br>
 
-<p float="left">
-  <img src="Pictures/UV-K5-keypad-T9.jpg" />
-</p>
+<img align="left" width="530" src="Pictures/UV-K5-keypad-T9.jpg" />
 
-Keys :<br>
+# Messenger Keys
+   "*" - Change keyboard, Upper case, Lower case, Numeric.<br>
+   "0" - Space, except in numeric mode.<br>
+   "F" - Backspace.<br>
+   "(Long press) F" - Clear all messages.<br>
+   "UP" - Recalls last sent message.<br>
+   "M" - Transmits message in the frequency of active VFO.<br>
+   "Exit" - Close application.<br><br>
 
-* "*" - Change keyboard, Upper case, Lower case, Numeric.<br>
-* "0" - Space, except in numeric mode.<br>
-* "F" - Backspace.<br>
-* "(Long press) F" - Clear all messages.<br>
-* "UP" - Recalls last sent message.<br>
-* "M" - Transmits message in the frequency of active VFO.<br>
-* "Exit" - Close application.<br><br>
 
-<p float="left">
-  <img src="Pictures/comingsoon.gif" />
-</p>
+<img align="left" width="360" src="Pictures/comingsoon.gif" />
 
-**MCFW V0.33.0C** - Based on MCFW V0.31.xC ( With better improvement on SQL and DTMF Disabled )<br>
-					* Normal LCD - Six Roger Beeps + FM Radio + Spectrum + SList Editor + Spectrum + Messenger Version<br>
-     					* Inverted LCD - Six Roger Beeps + FM Radio + Spectrum + SList Editor + Spectrum + Messenger Version
+# Coming Soon 
+**MCFW V0.33.0C** - Based on MCFW V0.31.xC ( With better improvement on SQL and DTMF Disabled )<br><br>
+**NEW on this Firmware** : Normal screen or Negative screen Versions + Messenger with audible notification of message reception by the receiver and visual notification in case of message received on VFO + Six Rogers Beeps + battery percentage, you need to go to the MENU to choose your battery if it is 1600mAh or 2200mAh<br>
+					**Version:**<br>
+     						* Messenger + Six Roger Beeps + FM Radio + Spectrum + SList Editor
 
 **MCFW V0.32.0C** - Based on MCFW V0.31.xC ( With good improvement on SQL + SList Editor )<br>
 					* FM Radio Version <br>
