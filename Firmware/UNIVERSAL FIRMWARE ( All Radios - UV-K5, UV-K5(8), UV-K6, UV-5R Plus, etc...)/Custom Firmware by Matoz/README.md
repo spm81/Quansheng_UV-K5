@@ -38,7 +38,7 @@
    "M" - Transmits message in the frequency of active VFO.<br>
    "Exit" - Close application.<br><br>
 
-
+[<img src="Pictures/0.33_a.png" width="40%">](https://www.youtube.com/watch?v=JPs0xCuhtXk "MCFW V0.33.0C") [<img src="Pictures/0.33_b.png" width="40%">](https://www.youtube.com/watch?v=JPs0xCuhtXk "MCFW V0.33.0C")   
 **MCFW V0.33.0C** - Based on MCFW V0.31.xC ( With better improvement on SQL and DTMF Disabled )<br>
 **NEW on this Firmware** : Normal Screen or Negative Screen Versions + Better improvement on SQL then last version + TX RSSI Bar + Messenger with audible notification of message reception by the receiver and visual notification in case of message received on VFO + Six Rogers Beeps + Battery percentage, you need to go to the MENU to choose your battery if it is 1600mAh or 2200mAh<br>
 					**Version:**<br>
