@@ -1,0 +1,38 @@
+QS K5 IJV Mod Changelog 
+
+
+V2.8d
+----------------------------------------------------------------------------------
+- Migliorata Modulazione AM e DSB
+- ripristinato funzionamento micbar in AM,SSB e CW 
+- aggiunta selettiva CCIR-1 a 100 ms ( CCIR-1F = 50 ms )
+- rese piu' silenziose tutte le operazioni in monitor eliminati i click fastidiosi.
+- migliorata visualizzazione DTMF Live
+
+- corretto BUG su calibrazione frequenza
+- corretto bug su dual watch all'avvio.
+- corretto smeter in doppia visualizzazione
+- corretto bug su Xrit e Monitor attivo
+- correzione BUG cambio AGC con memoria attiva
+- correzione bug su Chiamata selettiva DTMF
+b - correzione sovrapposizione Smeter con dbM
+c - corretto bug invio DTMF da tastiera in trasmissione
+c - corretto bug su ascolto in FM ( blocco dei tasti laterali )
+d - corretta selettiva CCIR-1 ( 100 ms )
+
+
+V2.7
+----------------------------------------------------------------------------------
+- inserite lettere su codici selettive : OWN ID , UPCODE, DWCODE
+- inserito tono Custom su CTCSS
+- inserita Calibrazione Frequenza per CW e SSB
+- corretto problema blocco tastiera su FM 88-108
+- ripristinata status line su FM 88-108
+- corretto bug sulle selettive
+- corretto bug sul cambio banda
+
+
+V2.6 R4
+----------------------------------------------------------------------------------
+- Eliminato fastidioso click su cambio frequenza con monitor attivo.
+- correzioni varie
