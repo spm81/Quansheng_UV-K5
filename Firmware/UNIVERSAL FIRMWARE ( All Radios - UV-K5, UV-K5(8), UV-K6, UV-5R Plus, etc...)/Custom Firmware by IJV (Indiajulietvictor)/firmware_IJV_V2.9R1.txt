@@ -1,0 +1,110 @@
+Note Generali.. 
+
+cose da sapere prima di fare domande :
+
+----------------------------------------------------------------------
+PROBLEMI CON CHIRP : 
+
+il firmware che ho realizzato e' quasi totalmente differente da quello originale, e' normale che chirp avendo realizzato il plugin per la versione stock non riconosca esattamente le locazioni di memoria utilizzate dal firmware, pertanto ci saranno sempre problemi di impostazioni errate fino a quando non sara' prodotto il plugin per questo firmware o in alternativa un software di gestione della radio, al momento si devono  correggere a mano sulla radio i parametri che non coincidono.
+
+----------------------------------------------------------------------
+PRIMA INSTALLAZIONE
+
+- effettuare necessariamente un Reset VFO ( PTT + EXIT ) in accensione
+- entrare nel menu servizi ( PTT + Lat1 ) in accensione
+- controllare le impostazioni del menu :
+
+	- menu 17 ChDisp = NAME + FREQ
+	- menu 18 BLTIME = ... scegli tu
+	- menu 19 BLMode = RXTX
+	- menu 20 BEEP = ... scegli tu
+	- menu 25 TAILTE = ON
+	- menu 39 LMon = ON
+	- menu 46 DIG ID = OFF
+	- menu 47 DIGSRV = OFF  se non usi selettive
+	- menu 49 BatSav = OFF
+	- menu 51 Satcom = OFF
+	- menu 52 UpConv = OFF
+
+	————————————- menu servizi
+	- menu 63 F LOCK = OFF
+	- menu 65 TXP EN = ON
+
+----------------------------------------------------------------------
+LA RADIO E' SORDA
+
+Se nonostante il reset VFO si hanno problemi di ricezione controllare che :
+
+- se si proviene da un altro tipo di firmware ripristinare il backup del file di calibrazione originale.
+
+- l'antenna sia funzionante ( magari provarne un'altra )
+
+- se si sta utilizzando un altro tipo di antenna che non sia il gommino classico ( antenne telescopiche, esterne, base magnetica ecc. ) si devono usare necessariamente i filtri o BP o NOTCH 88-108 altrimenti si peggiora l'ascolto.
+
+- non ci siano sorgenti di disturbo nelle vicinanze ( anche un PC puo' generare segnali forti )
+
+provare a regolare il gain :
+
+	- disabilitare il dual watch
+	- impostare FM
+	- mettere la radio in monitor, non e' importante dover ricevere qualcosa.
+	- premere a lungo il tasto 1 ( deve comparire F nella riga in alto del display )
+	- regolare il gain con le frecce, portare il valore al massimo e da li' scendere 10 punti sotto
+	- premere a lungo M per memorizzare il valore.
+
+
+----------------------------------------------------------------------
+NON RIESCO AD INSERIRE LA FREQUENZA MI TORNA SEMPRE ALLO STESSO VALORE
+
+- questo firmware e' differente dagli altri ha bisogno di una cifra in piu' all'inserimento ad esempio : 145 000 0
+
+
+----------------------------------------------------------------------
+MI COMPARE TX DISABLE
+
+- non hai seguito correttamente la procedura di installazione ( vedi sopra )
+
+
+----------------------------------------------------------------------
+LO SQUELCH RIMANE SEMPRE APERTO
+
+- fate attenzione di non aver inserito filtro stretto N- lo squelch diventa piu' sensibile.
+- probabilmente c'e' una forte sorgente di disturbo nelle vicinanze.
+
+
+----------------------------------------------------------------------
+LA RADIO IN RICEZIONE CON SEGNALI FORTI VA AD INTERMITTENZA
+
+- sicuramente avete attivato il SATCOM...questo deve essere utilizzato esclusivamente per l'ascolto di segnali deboli, non puo' essere sempre inserito.
+
+----------------------------------------------------------------------
+IN TRASMISSIONE LO SCHERMO DIVENTA A RIGHE
+
+- e'un problema di rientro di RF ( probabile antenna difettosa o eccessiva vicinanza di parti del corpo al display ) 
+  si risolve disabilitando da MENU --> MICBAR = OFF
+
+----------------------------------------------------------------------
+
+NON RIESCO AD IMPOSTARE L'AGC MI RIMANE SEMPRE IN MAN
+
+- L'AGC slow e fast servono esclusivamente per AM, DSB e CW  solo in queste modalita' si possono cambiare 
+  in FM rimane esclusivamente fissa in MAN.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

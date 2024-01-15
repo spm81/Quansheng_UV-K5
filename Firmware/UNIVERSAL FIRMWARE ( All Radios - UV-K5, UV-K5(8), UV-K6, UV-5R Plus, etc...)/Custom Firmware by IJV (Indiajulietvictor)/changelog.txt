@@ -1,5 +1,26 @@
 QS K5 IJV Mod Changelog 
 
+V2.9
+----------------------------------------------------------------------------------
+- Inserita funzione chiamata Automatica CW ( con QRZ ) con visualizzazione dei
+  caratteri trasmissi sui display.
+- Inserita nuova funzione ( CALL CW ) nelle associazioni pulsanti laterali
+- inserito campo QRZ nel menu servizi
+- inserita voce menu PONMSG per visualizzazione QRZ all'avvio
+- aggiunto step 9 Khz
+- aumentata a 5 elementi la lista degli step brevi
+- attivata chiamata selettiva di gruppo in DTMF
+- aggiunto ritorno a OFF immediato con tasto 0 in immissione CTCSS
+
+- eliminata voce attivazione Scrambler dal menu servizi
+- corretto passo 8.33 si riallinea 25 Khz 
+
+R1
+- Corretta la spaziatura extra nel nominativo nella trasmissione automatica CW 
+- ritoccati i tempi nella trasmissione automatica CW
+- corretto BUG menu 19 dopo Reset VFO
+- aggiunto blocco trasmissione automatica CW con pulsante PTT
+
 
 V2.8d
 ----------------------------------------------------------------------------------
