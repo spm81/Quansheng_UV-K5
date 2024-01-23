@@ -1,6 +1,32 @@
 QS K5 IJV Mod Changelog 
 
 
+
+V2.9 R3
+----------------------------------------------------------------------------------
+- Modificati tempi per TxTOT e Beacon
+- aggiunto preavviso TxTOT a 10 e 5 secondi prima della chiusura 
+- modificate funzioni del tasto EXIT attive adesso solo per VFO 
+- Attivato VOX anche per le altre modulazioni tranne CW
+- attivato scrambler anche su altre modulazioni tranne CW
+- corretta l'impostazione dei livelli del VOX
+- ritardata attivazione del VOX all'avvio.
+- Aggiunta visualizzazione FM Lock in FM 88-108
+- Corretta indicazione del Beacon Attivo nel VFO
+- aggiunta protezione per salvaguardia dati su eeprom in caso di batteria scarica.
+
+- ripristinata tensione batteria nel menu INFO *
+
+  * ( considerate il valore come indicativo, a causa delle tolleranze costruttive  puo' non essere esatto, 
+    e dati i precedenti su questo non sento ragioni prendetelo cosi' com'e' e se non vi sta bene non lo guardate ). 
+    
+- riaggiustata la scala batteria 4 tacche > 8V  poi decresce 0.25V (circa) ogni tacca. **
+
+  ** ( questa scala e' una mia impostazione non si faranno variazioni di nessun tipo, vedi nota precedente )
+    
+  
+  
+
 V2.9 R2
 ----------------------------------------------------------------------------------
 - Aggiunta funzione Beacon nel Menu che consente la ripetizione del messaggio in CW
