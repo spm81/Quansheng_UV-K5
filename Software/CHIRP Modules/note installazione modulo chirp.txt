@@ -1,0 +1,83 @@
+
+Ricordo che il modulo allegato e' sperimentale non definitivo, ma meglio di quello originale c'e'.
+
+Data l'impostazione di base di Chirp che al momento non si riesce a modificare 
+per adattare le Modulazioni con le larghezze di banda va usata questa tabella
+
+
+Installazione modulo Python per Chirp V2.9R3.10b
+---------------------------------------------------------------------
+
+- Aprire CHIRP
+
+- Assicuratevi di essere in "Modalità sviluppatore",
+	quindi -> menu Aiuto -> spuntare "Modalità sviluppatore"
+	Al messaggio di allerta rispondete Sì e riavviate CHIRP come richiesto.
+
+- Cliccare FILE in menu.
+
+- Selezionare la voce "Carica Modulo".
+
+- Al messaggio di allerta, rispondete Sì.
+
+- Caricare il modulo allegato "uvk5_IJV_vx.xRx_Mod.py".
+
+- Leggere la radio con la normale procedura, selezionate nella lista delle radio il modello: "UV-K5-IJV vx.x".
+
+- N.B.: Il plugin "uvk5_IJV_vx.xRx_Mod.py" va caricato ogni volta che si vuole modificare la radio o il file .img.
+
+
+
+
+Python module installation for Chirp
+---------------------------------------------------------------------
+
+- Open CHIRP
+
+- Make sure you are in "Developer mode",
+then -> Help menu -> check "Developer mode"
+At the warning message answer YES and restart CHIRP as prompted.
+
+- Click FILE in the menu.
+
+- Select "Load Module".
+
+- At the alert message, answer Yes.
+
+- Load the module 'uvk5_IJV_vx.xRx_Mod.py'.
+
+- Read the radio using the normal procedure, select the model: 'UV-K5-IJV vx.x' in the radio list.
+
+- N.B.: The plugin 'uvk5_IJV_vx.xRx_Mod.py' must be loaded every time you want to edit the radio or the .img file.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

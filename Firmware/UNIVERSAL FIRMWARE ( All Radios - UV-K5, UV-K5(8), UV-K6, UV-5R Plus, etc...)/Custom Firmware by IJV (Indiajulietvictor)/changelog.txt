@@ -2,6 +2,19 @@ QS K5 IJV Mod Changelog
 
 
 
+
+
+V2.9 R4     27-01-24
+----------------------------------------------------------------------------------
+- aggiunto blocco/sblocco tastiera in scansione
+- evitato blocco automatico tastiera se si e' dentro il menu
+- ripristinato scrambler e compander solo in FM in altri tipi di modulazioni non funziona.
+- verifica immediata scrambler in ricezione da menu.
+- risolto il Bug del Vox in AM e DSB
+- aumentato il timeout del Vox da 1 secondo a 2 secondi.
+
+
+
 V2.9 R3
 ----------------------------------------------------------------------------------
 - Modificati tempi per TxTOT e Beacon
