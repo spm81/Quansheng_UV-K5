@@ -20,11 +20,11 @@ Installazione modulo Python per Chirp V2.9R3.10b
 
 - Al messaggio di allerta, rispondete Sì.
 
-- Caricare il modulo allegato "uvk5_IJV_vx.xRx_Mod.py".
+- Caricare il modulo allegato "uvk5_IJV_vx.xxxx.py".
 
-- Leggere la radio con la normale procedura, selezionate nella lista delle radio il modello: "UV-K5-IJV vx.x".
+- Leggere la radio con la normale procedura, selezionate nella lista delle radio il modello: "UV-K5-IJV vx.xxxx".
 
-- N.B.: Il plugin "uvk5_IJV_vx.xRx_Mod.py" va caricato ogni volta che si vuole modificare la radio o il file .img.
+- N.B.: Il plugin "uvk5_IJV_vx.xxxxx.py" va caricato ogni volta che si vuole modificare la radio o il file .img.
 
 
 
@@ -44,11 +44,11 @@ At the warning message answer YES and restart CHIRP as prompted.
 
 - At the alert message, answer Yes.
 
-- Load the module 'uvk5_IJV_vx.xRx_Mod.py'.
+- Load the module 'uvk5_IJV_vx.xxxxx.py'.
 
-- Read the radio using the normal procedure, select the model: 'UV-K5-IJV vx.x' in the radio list.
+- Read the radio using the normal procedure, select the model: 'UV-K5-IJV vx.xxxx' in the radio list.
 
-- N.B.: The plugin 'uvk5_IJV_vx.xRx_Mod.py' must be loaded every time you want to edit the radio or the .img file.
+- N.B.: The plugin 'uvk5_IJV_vx.xxxxx.py' must be loaded every time you want to edit the radio or the .img file.
 
 
 

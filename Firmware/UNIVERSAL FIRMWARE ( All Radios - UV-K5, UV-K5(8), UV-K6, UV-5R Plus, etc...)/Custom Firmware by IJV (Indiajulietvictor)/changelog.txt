@@ -1,6 +1,12 @@
 QS K5 IJV Mod Changelog 
 
 
+V2.9 R5     30-01-24
+----------------------------------------------------------------------------------
+- aggiunto Squelch differenziato per singolo VFO
+- il cambio dello squelch da pulsanti laterali adesso salva l'ultimo valore.
+- aggiunta visualizzazione Frequenze e codici toni CTCSS e DCS nel VFO Singolo
+- accorpate sigle VFO per recuperare spazio 
 
 
 
