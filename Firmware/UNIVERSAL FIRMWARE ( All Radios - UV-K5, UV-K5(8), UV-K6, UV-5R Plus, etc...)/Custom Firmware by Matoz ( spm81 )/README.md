@@ -1,4 +1,6 @@
 * Podes-me encontrar no [Telegram](https://t.me/PMR446PT) (Portuguese Only) !!!<br>
+<br>
+* [FLASH VIA WEB BROWSER HERE}(https://egzumer.github.io/uvtools/) <br>
 
 # Tunning Firmwares by Matoz - Info:
 
