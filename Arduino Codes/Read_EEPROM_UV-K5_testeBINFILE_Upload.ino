@@ -5,7 +5,7 @@
 #include <ESP8266WiFi.h>
 #include <ESP8266WebServer.h>
 
-const char *ssid = "UV-K5 EEPROM";
+const char *ssid = "UVK5";
 const char *password = "MTel";
 
 #define SDA_PIN D2 // GPIO pin for SDA (Data)
@@ -17,14 +17,175 @@ ESP8266WebServer server(80);
 bool buttonPressed = false;
 File fsUploadFile; // Temporary file to store uploaded data
 
+/*void handleRoot() {
+  String html = "<!DOCTYPE html><html><head><title>ESP8266 Control Interface</title></head><body><h1>ESP8266 Control Interface</h1><br><br><br><form method='POST' action='/writeeeprom'><label for='offset'>Offset:</label><input type='text' id='offset' name='offset'><br><br><label for='data'>Data (16 bytes, separated by spaces):</label><input type='text' id='data' name='data'><br><br><input type='submit' value='Write EEPROM'></form><br><br><button onclick=\"startDownload()\">Start Download</button><br><br><button onclick=\"pressButton()\">Read EEPROM from radio and save it!!</button><br><br><button onclick=\"deleteFile()\">Delete File</button><br><br><button onclick=\"readEEPROM()\">Read EEPROM from Radio</button><br><br><button onclick=\"readEEPROMFile()\">Read EEPROM from File</button><br><br><script>function startDownload(){fetch('/download').then(response => response.text()).then(data => alert(data)).catch(error => console.error('Error:', error));}function pressButton(){fetch('/button').then(response => response.text()).then(data => alert(data)).catch(error => console.error('Error:', error));}function deleteFile(){fetch('/deletefile').then(response => response.text()).then(data => alert(data)).catch(error => console.error('Error:', error));}function readEEPROM(){fetch('/readeeprom').then(response => response.text()).then(data => alert(data)).catch(error => console.error('Error:', error));}function readEEPROMFile(){fetch('/readeepromfile').then(response => response.text()).then(data => alert(data)).catch(error => console.error('Error:', error));}</script></body></html>";
+  server.send(200, "text/html", html);
+
+  }
+
 void handleRoot() {
-  String html = "<!DOCTYPE html><html><head><title>ESP8266 Control Interface</title></head><body><h1>ESP8266 Control Interface</h1><br><form method='POST' action='/upload' enctype='multipart/form-data'><input type='file' name='file'><input type='submit' value='Upload'></form><button onclick=\"startDownload()\">Start Download</button><br><button onclick=\"pressButton()\">Read EEPROM from radio and save it!!</button><br><button onclick=\"deleteFile()\">Delete File</button><br><button onclick=\"readEEPROM()\">Read EEPROM from Radio</button><br><button onclick=\"readEEPROMFile()\">Read EEPROM from File</button><br><script>function startDownload(){fetch('/download').then(response => response.text()).then(data => alert(data)).catch(error => console.error('Error:', error));}function pressButton(){fetch('/button').then(response => response.text()).then(data => alert(data)).catch(error => console.error('Error:', error));}function deleteFile(){fetch('/deletefile').then(response => response.text()).then(data => alert(data)).catch(error => console.error('Error:', error));}function readEEPROM(){fetch('/readeeprom').then(response => response.text()).then(data => alert(data)).catch(error => console.error('Error:', error));}function readEEPROMFile(){fetch('/readeepromfile').then(response => response.text()).then(data => alert(data)).catch(error => console.error('Error:', error));}</script></body></html>";
+  String html = "<!DOCTYPE html><html><head><title>ESP8266 Control Interface</title></head><body><h1>ESP8266 Control Interface</h1><br><br><br><form method='GET' action='/readeepromoffset'><label for='offsetSelect'>Offset Select:</label><input type='text' id='offsetSelect' name='offsetSelect'><p><input type='submit' value='Read EEPROM From Radio at Offset'></form><br><br><button onclick=\"startDownload()\">Start Download</button><br><br><button onclick=\"pressButton()\">Read EEPROM from radio and save it!!</button><br><br><button onclick=\"deleteFile()\">Delete File</button><br><br><button onclick=\"readEEPROM()\">Read EEPROM from Radio</button><br><br><button onclick=\"readEEPROMFile()\">Read EEPROM from File</button><br><br><script>function startDownload(){fetch('/download').then(response => response.text()).then(data => alert(data)).catch(error => console.error('Error:', error));}function pressButton(){fetch('/button').then(response => response.text()).then(data => alert(data)).catch(error => console.error('Error:', error));}function deleteFile(){fetch('/deletefile').then(response => response.text()).then(data => alert(data)).catch(error => console.error('Error:', error));}function readEEPROM(){fetch('/readeeprom').then(response => response.text()).then(data => alert(data)).catch(error => console.error('Error:', error));}function readEEPROMFile(){fetch('/readeepromfile').then(response => response.text()).then(data => alert(data)).catch(error => console.error('Error:', error));}</script></body></html>";
+  server.send(200, "text/html", html);
+}
+*/
+void handleRoot() {
+  String html = 
+  "<!DOCTYPE html>\
+  <html>\
+  <head>\
+    <title>ESP8266 Control Interface</title>\
+  </head>\
+  <body>\
+    <h1>ESP8266 Control Interface</h1>\
+    <br><br><br>\
+    <form method='GET' action='/readeepromoffset'>\
+      <label for='offsetSelect'>Offset Select:</label>\
+      <input type='text' id='offsetSelect' name='offsetSelect'>\
+      <p><input type='submit' value='Read EEPROM From Radio at Offset'>\
+    </form>\
+    <br>\
+    <button onclick=\"startDownload()\">Start Download</button>\
+    <br><br>\
+    <button onclick=\"pressButton()\">Read EEPROM from radio and save it!!</button>\
+    <br><br>\
+    <button onclick=\"deleteFile()\">Delete File</button>\
+    <br><br>\
+    <button onclick=\"readEEPROM()\">Read EEPROM from Radio</button>\
+    <br><br>\
+    <button onclick=\"readEEPROMFile()\">Read EEPROM from File</button>\
+    <br><br>\
+    <button onclick=\"uploadToEEPROM()\">Upload eeprom_data.bin file to radio EEPROM</button><br><br>\
+    <script>\
+      function startDownload(){\
+        fetch('/download')\
+          .then(response => response.text())\
+          .then(data => alert(data))\
+          .catch(error => console.error('Error:', error));\
+      }\
+      function pressButton(){\
+        fetch('/button')\
+          .then(response => response.text())\
+          .then(data => alert(data))\
+          .catch(error => console.error('Error:', error));\
+      }\
+      function deleteFile(){\
+        fetch('/deletefile')\
+          .then(response => response.text())\
+          .then(data => alert(data))\
+          .catch(error => console.error('Error:', error));\
+      }\
+      function readEEPROM(){\
+        fetch('/readeeprom')\
+          .then(response => response.text())\
+          .then(data => alert(data))\
+          .catch(error => console.error('Error:', error));\
+      }\
+      function readEEPROMFile(){\
+        fetch('/readeepromfile')\
+          .then(response => response.text())\
+          .then(data => alert(data))\
+          .catch(error => console.error('Error:', error));\
+      }\
+      function uploadToEEPROM(){\
+        fetch('/uploadToEEPROM')\
+          .then(response => response.text())\
+          .then(data => alert(data))\
+          .catch(error => console.error('Error:', error));\
+      }\
+    </script>\
+  </body>\
+  </html>";
+  
   server.send(200, "text/html", html);
 }
 
-void handleReadEEPROM() {
+/*
+  void handleReadEEPROMOffsetFromRadio() {
+  // Verifica se foi enviado o argumento (offsetSelect)
+  if (server.args() == 1) {
+    uint16_t offset = (uint16_t) strtol(server.arg("offsetSelect").c_str(), NULL, 16); // Obtém o offset selecionado
+
+    // Verifica se o offset está dentro dos limites da EEPROM
+    if (offset >= EEPROM_SIZE) {
+      server.send(400, "text/plain", "Erro: Offset fora dos limites da EEPROM");
+      return;
+    }
+
+    // Lê os 16 bytes a partir do offset selecionado
+    byte readData[16];
+    EEPROM_ReadBuffer(offset, readData, sizeof(readData));
+
+    // Constrói uma string com os dados lidos
+    String responseData = "Decoded text: ";
+    for (int i = 0; i < sizeof(readData); i++) {
+      if (readData[i] < 0x20 || readData[i] > 0x7E) { // Fora do intervalo ASCII imprimível
+        responseData += ".";
+      } else {
+        responseData += (char)readData[i];
+      }
+    }
+    responseData += "\nRaw data: ";
+    for (int i = 0; i < sizeof(readData); i++) {
+      if (readData[i] < 0x10) {
+        responseData += "0";
+      }
+      responseData += String(readData[i], HEX);
+      responseData += " ";
+    }
+
+    server.send(200, "text/plain", responseData);
+  } else {
+    server.send(400, "text/plain", "Erro: Deve enviar um argumento (offsetSelect)");
+  }
+  }
+*/
+void handleReadEEPROMOffsetFromRadio() {
+  // Verifica se foi enviado o argumento (offsetSelect)
+  if (server.args() == 1) {
+    uint16_t offset = (uint16_t) strtol(server.arg("offsetSelect").c_str(), NULL, 16); // Obtém o offset selecionado
+
+    // Verifica se o offset está dentro dos limites da EEPROM
+    if (offset >= EEPROM_SIZE) {
+      server.send(400, "text/plain", "Erro: Offset fora dos limites da EEPROM");
+      return;
+    }
+
+    // Lê os 16 bytes a partir do offset selecionado
+    byte readData[16];
+    EEPROM_ReadBuffer(offset, readData, sizeof(readData));
+
+    // Constrói uma string com os dados lidos
+    String responseData = "Raw data: ";
+    for (int i = 0; i < sizeof(readData); i++) {
+      if (readData[i] < 0x10) {
+        responseData += "0";
+      }
+      responseData += String(readData[i], HEX);
+      responseData += " ";
+    }
+    responseData += "     Decoded text: ";
+    for (int i = 0; i < sizeof(readData); i++) {
+      if (readData[i] < 0x20 || readData[i] > 0x7E) { // Fora do intervalo ASCII imprimível
+        responseData += ".";
+      } else {
+        responseData += (char)readData[i];
+      }
+    }
+
+    server.send(200, "text/plain", responseData);
+  } else {
+    server.send(400, "text/plain", "Erro: Deve enviar um argumento (offsetSelect)");
+  }
+}
+
+
+
+
+
+/*
+  void handleReadEEPROM() {
   Serial.println("Reading EEPROM:");
- for (uint16_t offset = 0; offset < EEPROM_SIZE; offset += 16) {
+  for (uint16_t offset = 0; offset < EEPROM_SIZE; offset += 16) {
     byte readData[16];
     EEPROM_ReadBuffer(offset, readData, sizeof(readData));
 
@@ -50,10 +211,122 @@ void handleReadEEPROM() {
       Serial.print(" ");
     }
     Serial.println();
-      delay(5);
+    delay(5);
   }
   server.send(200, "text/plain", "EEPROM data printed in Serial");
+  }
+*/
+void handleReadEEPROM() {
+  String responseData = "Reading EEPROM:\n";
+  for (uint16_t offset = 0; offset < EEPROM_SIZE; offset += 16) {
+    byte readData[16];
+    EEPROM_ReadBuffer(offset, readData, sizeof(readData));
+
+    responseData += "Offset: 0x";
+    if (offset < 0x1000) {
+      Serial.print("0");
+      responseData += "0";
+    }
+    if (offset < 0x100) {
+      Serial.print("0");
+      responseData += "0";
+    }
+    if (offset < 0x10) {
+      Serial.print("0");
+      responseData += "0";
+    }
+    Serial.print(offset, HEX);
+    Serial.print(" : ");
+    responseData += String(offset, HEX);
+    responseData += " : ";
+
+
+    // Add raw data to response
+    for (int i = 0; i < sizeof(readData); i++) {
+      if (readData[i] < 0x10) {
+        Serial.print("0");
+        responseData += "0";
+      }
+      Serial.print(readData[i], HEX);
+      Serial.print(" ");
+      responseData += String(readData[i], HEX);
+      responseData += " ";
+    }
+
+    responseData += "     Decoded text: ";
+    // Add decoded text to response
+    for (int i = 0; i < sizeof(readData); i++) {
+      if (readData[i] < 0x20 || readData[i] > 0x7E) { // Outside printable ASCII range
+        responseData += ".";
+        Serial.print(".");
+      } else {
+        Serial.print((char)readData[i]);
+        responseData += (char)readData[i];
+      }
+    }
+    Serial.println();
+    responseData += "\n";
+    delay(50);
+  }
+  server.send(200, "text/plain", responseData);
 }
+
+
+////Escreve em DECODED TEXT
+/*
+void handleWriteEEPROM() {
+  if (server.method() == HTTP_POST) {
+    uint16_t address = server.arg("address").toInt();
+    String data = server.arg("data");
+    
+    Wire.beginTransmission(EEPROM_ADDRESS);
+    Wire.write((byte)(address >> 8)); // Most significant byte
+    Wire.write((byte)(address & 0xFF)); // Least significant byte
+    
+    for (size_t i = 0; i < data.length(); i++) {
+      Wire.write(data[i]);
+    }
+    
+    Wire.endTransmission();
+    
+    server.send(200, "text/plain", "Write successful");
+  } else {
+    server.send(405, "text/plain", "Method Not Allowed");
+  }
+}
+*/
+void handleWriteEEPROM() {
+  if (server.method() == HTTP_POST) {
+    String addressStr = server.arg("address");
+    uint16_t address = strtoul(addressStr.c_str(), NULL, 16); // Parse address as hexadecimal
+    
+    String hexData = server.arg("data");
+    
+    Wire.beginTransmission(EEPROM_ADDRESS);
+    Wire.write((byte)(address >> 8)); // Byte mais significativo
+    Wire.write((byte)(address & 0xFF)); // Byte menos significativo
+    
+    // Escreve os dados hexadecimais diretamente na EEPROM
+    for (size_t i = 0; i < hexData.length(); i += 2) {
+      String hexByte = hexData.substring(i, i + 2);
+      byte byteValue = (byte) strtol(hexByte.c_str(), NULL, 16);
+      Wire.write(byteValue);
+    }
+    
+    Wire.endTransmission();
+    
+    server.send(200, "text/plain", "Escrita bem sucedida");
+  } else {
+    server.send(405, "text/plain", "Método não permitido");
+  }
+}
+
+
+
+
+
+
+
 
 void handleReadEEPROMFromFile() {
   File dataFile = SPIFFS.open("/eeprom_data.bin", "r");
@@ -101,7 +374,63 @@ void handleReadEEPROMFromFile() {
 
 
 
+
 void handleUpload() {
+  HTTPUpload& upload = server.upload();
+  if (upload.status == UPLOAD_FILE_START) {
+    fsUploadFile = SPIFFS.open("/eeprom_data.bin", "w"); // Open the EEPROM data file for writing
+    if (!fsUploadFile) {
+      Serial.println("Failed to open file for writing");
+      return;
+    }
+  } else if (upload.status == UPLOAD_FILE_WRITE) {
+    if (fsUploadFile) {
+      int bytesWritten = fsUploadFile.write(upload.buf, upload.currentSize);
+      if (bytesWritten != upload.currentSize) {
+        Serial.println("Error writing to file");
+      }
+    } else {
+      Serial.println("File is not open");
+    }
+  } else if (upload.status == UPLOAD_FILE_END) {
+    if (fsUploadFile) {
+      fsUploadFile.close();
+    } else {
+      Serial.println("File is not open");
+      return;
+    }
+
+    server.send(200, "text/plain", "File uploaded successfully");
+  }
+}
+
+void handleUploadToEEPROM() {
+  File dataFile = SPIFFS.open("/eeprom_data.bin", "r");
+  if (!dataFile) {
+    server.send(500, "text/plain", "Failed to open file for reading");
+    Serial.println("Failed to open file for reading");
+    return;
+  }
+
+  // Write EEPROM data
+  for (uint16_t offset = 0; offset < EEPROM_SIZE; offset++) {
+    byte readData;
+    size_t bytesRead = dataFile.read(&readData, sizeof(readData));
+    if (bytesRead == 0) {
+      // End of file reached, break the loop
+      break;
+    }
+    EEPROM_WriteBuffer(offset, &readData, sizeof(readData));
+  }
+
+  // Close file
+  dataFile.close();
+
+  server.send(200, "text/plain", "EEPROM Data Uploaded Successfully");
+}
+
+/*
+  void handleUpload() {
   HTTPUpload& upload = server.upload();
   if (upload.status == UPLOAD_FILE_START) {
     Serial.printf("UploadStart: %s, total size: %u\n", upload.filename.c_str(), upload.totalSize);
@@ -161,9 +490,9 @@ void handleUpload() {
     }
     dataFile.close();
   }
-}
+  }
 
-
+*/
 void handleDownload() {
   File dataFile = SPIFFS.open("/eeprom_data.bin", "r");
   if (!dataFile) {
@@ -215,6 +544,9 @@ void setup() {
   server.on("/deletefile", HTTP_GET, handleDeleteFile);
   server.on("/readeeprom", HTTP_GET, handleReadEEPROM); // Nova rota para ler eeprom
   server.on("/readeepromfile", HTTP_GET, handleReadEEPROMFromFile); // Add new route
+  server.on("/writeeeprom", HTTP_POST, handleWriteEEPROM);
+  server.on("/readeepromoffset", HTTP_GET, handleReadEEPROMOffsetFromRadio);
+server.on("/uploadToEEPROM", handleUploadToEEPROM);
 
   server.begin();
   Serial.println("HTTP server started");
@@ -261,4 +593,17 @@ void EEPROM_ReadBuffer(uint16_t Address, void *pBuffer, uint16_t Size) {
       ptr++;
     }
   }
+}
+
+void EEPROM_WriteBuffer(uint16_t Address, const void *pBuffer, uint16_t Size) {
+  Wire.beginTransmission(EEPROM_ADDRESS);
+  Wire.write((byte)(Address >> 8)); // byte mais significativo
+  Wire.write((byte)(Address & 0xFF)); // byte menos significativo
+  const byte *ptr = (const byte *)pBuffer;
+  for (uint16_t i = 0; i < Size; i++) {
+    Wire.write(*ptr);
+    ptr++;
+  }
+  Wire.endTransmission();
+  delay(10); // delay necessário para garantir que a escrita seja concluída
 }
