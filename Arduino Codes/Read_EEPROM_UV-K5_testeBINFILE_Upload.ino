@@ -1,12 +1,16 @@
 //@2024 - Matoz ESP8266 / ESP32 UV-K5 Reader/Writer EEPROM
 
+//#define ENABLE_AP //Remove "//" if you want ESP8266 to act as an Acess Point
+
 #include "FS.h"
 #include <Wire.h>
 #include <ESP8266WiFi.h>
 #include <ESP8266WebServer.h>
+#include <ESP8266HTTPClient.h>
+#include <EEPROM.h> // Include the EEPROM library
 
-const char *ssid = "UVK5";
-const char *password = "MTel";
+const char *ssid = "ENFERMEIRAANACOSTA.PT";
+const char *password = "Matos@Costa";
 
 #define SDA_PIN D2 // GPIO pin for SDA (Data)
 #define SCL_PIN D1 // GPIO pin for SCL (Clock)
@@ -23,13 +27,13 @@ File fsUploadFile; // Temporary file to store uploaded data
 
   }
 
-void handleRoot() {
+  void handleRoot() {
   String html = "<!DOCTYPE html><html><head><title>ESP8266 Control Interface</title></head><body><h1>ESP8266 Control Interface</h1><br><br><br><form method='GET' action='/readeepromoffset'><label for='offsetSelect'>Offset Select:</label><input type='text' id='offsetSelect' name='offsetSelect'><p><input type='submit' value='Read EEPROM From Radio at Offset'></form><br><br><button onclick=\"startDownload()\">Start Download</button><br><br><button onclick=\"pressButton()\">Read EEPROM from radio and save it!!</button><br><br><button onclick=\"deleteFile()\">Delete File</button><br><br><button onclick=\"readEEPROM()\">Read EEPROM from Radio</button><br><br><button onclick=\"readEEPROMFile()\">Read EEPROM from File</button><br><br><script>function startDownload(){fetch('/download').then(response => response.text()).then(data => alert(data)).catch(error => console.error('Error:', error));}function pressButton(){fetch('/button').then(response => response.text()).then(data => alert(data)).catch(error => console.error('Error:', error));}function deleteFile(){fetch('/deletefile').then(response => response.text()).then(data => alert(data)).catch(error => console.error('Error:', error));}function readEEPROM(){fetch('/readeeprom').then(response => response.text()).then(data => alert(data)).catch(error => console.error('Error:', error));}function readEEPROMFile(){fetch('/readeepromfile').then(response => response.text()).then(data => alert(data)).catch(error => console.error('Error:', error));}</script></body></html>";
   server.send(200, "text/html", html);
-}
-*/
-void handleRoot() {
-  String html = 
+  }
+
+  void handleRoot() {
+  String html =
   "<!DOCTYPE html>\
   <html>\
   <head>\
@@ -95,9 +99,269 @@ void handleRoot() {
     </script>\
   </body>\
   </html>";
-  
+
+  server.send(200, "text/html", html);
+  }
+
+  void handleRoot() {
+  String html = "<html>\
+  <head>\
+  <title>ESP8266 Control Interface</title>\
+  </head>\
+  <body style=\"color: rgb(51, 255, 51); background-color: rgb(1, 1, 1);\" alink=\"#000099\" link=\"#000099\" vlink=\"#990099\">\
+  <h1>ESP8266 Control Interface</h1>\
+  <br><br><br>\
+  <form method=\"get\" action=\"/readeepromoffset\">\
+    <label for=\"offsetSelect\">Offset Select:</label>\
+    <input id=\"offsetSelect\" name=\"offsetSelect\" type=\"text\">\
+    <input value=\"Read EEPROM From Radio at Offset\" type=\"submit\"><br><br>\
+  </form>\
+  <button onclick='startDownload()'>Start Download</button>\
+  &nbsp;&nbsp;&nbsp; \
+  <button onclick='pressButton()'>Read EEPROM from radio and save it!!</button>\
+  &nbsp;&nbsp;&nbsp; \
+  <button onclick='deleteFile()'>Delete File</button>\
+  &nbsp;&nbsp;&nbsp; \
+  <button onclick='readEEPROM()'>Read EEPROM from Radio</button>\
+  &nbsp;&nbsp;&nbsp; \
+  <button onclick='readEEPROMFile()'>Read EEPROM from File</button>\
+  &nbsp;&nbsp;&nbsp; \
+  <button onclick='uploadToEEPROM()'>Upload eeprom_data.bin file to radio EEPROM</button><br><br>\
+  <script>\
+    function startDownload(){\
+      fetch('/download')\
+        .then(response => response.text())\
+        .then(data => alert(data))\
+        .catch(error => console.error('Error:', error));\
+    }\
+    function pressButton(){\
+      fetch('/button')\
+        .then(response => response.text())\
+        .then(data => alert(data))\
+        .catch(error => console.error('Error:', error));\
+    }\
+    function deleteFile(){\
+      fetch('/deletefile')\
+        .then(response => response.text())\
+        .then(data => alert(data))\
+        .catch(error => console.error('Error:', error));\
+    }\
+    function readEEPROM(){\
+      fetch('/readeeprom')\
+        .then(response => response.text())\
+        .then(data => alert(data))\
+        .catch(error => console.error('Error:', error));\
+    }\
+    function readEEPROMFile(){\
+      fetch('/readeepromfile')\
+        .then(response => response.text())\
+        .then(data => alert(data))\
+        .catch(error => console.error('Error:', error));\
+    }\
+    function uploadToEEPROM(){\
+      fetch('/uploadToEEPROM')\
+        .then(response => response.text())\
+        .then(data => alert(data))\
+        .catch(error => console.error('Error:', error));\
+    }\
+  </script>\
+  </body>\
+  </html>";
+
+  server.send(200, "text/html", html);
+  }
+
+void handleRoot() {
+  String html = "<html>\
+<head>\
+  <title>ESP8266 Control Interface</title>\
+</head>\
+<body style=\"color: rgb(51, 255, 51); background-color: rgb(1, 1, 1);\" alink=\"#000099\" link=\"#000099\" vlink=\"#990099\">\
+  <h1>ESP8266 Control Interface</h1>\
+  <br><br><br>\
+  <form method=\"get\" action=\"/readeepromoffset\">\
+    <label for=\"offsetSelect\">Offset Select:</label>\
+    <input id=\"offsetSelect\" name=\"offsetSelect\" type=\"text\">\
+    <input value=\"Read EEPROM From Radio at Offset\" type=\"submit\"><br><br>\
+  </form>\
+  <button onclick='startDownload()'>Start Download</button>\
+  &nbsp;&nbsp;&nbsp; \
+  <button onclick='pressButton()'>Read EEPROM from radio and save it!!</button>\
+  &nbsp;&nbsp;&nbsp; \
+  <button onclick='deleteFile()'>Delete File</button>\
+  &nbsp;&nbsp;&nbsp; \
+  <button onclick='readEEPROM()'>Read EEPROM from Radio</button>\
+  &nbsp;&nbsp;&nbsp; \
+  <button onclick='readEEPROMFile()'>Read EEPROM from File</button>\
+  &nbsp;&nbsp;&nbsp; \
+  <button onclick='uploadToEEPROM()'>Upload eeprom_data.bin file to radio EEPROM</button><br><br>\
+  <button onclick='uploadFromWWW()'>Upload From WWW</button>\
+  <input id=\"fileURL\" type=\"text\" placeholder=\"Enter file URL\"><br><br>\
+  <script>\
+    function startDownload(){\
+      fetch('/download')\
+        .then(response => response.text())\
+        .then(data => alert(data))\
+        .catch(error => console.error('Error:', error));\
+    }\
+    function pressButton(){\
+      fetch('/button')\
+        .then(response => response.text())\
+        .then(data => alert(data))\
+        .catch(error => console.error('Error:', error));\
+    }\
+    function deleteFile(){\
+      fetch('/deletefile')\
+        .then(response => response.text())\
+        .then(data => alert(data))\
+        .catch(error => console.error('Error:', error));\
+    }\
+    function readEEPROM(){\
+      fetch('/readeeprom')\
+        .then(response => response.text())\
+        .then(data => alert(data))\
+        .catch(error => console.error('Error:', error));\
+    }\
+    function readEEPROMFile(){\
+      fetch('/readeepromfile')\
+        .then(response => response.text())\
+        .then(data => alert(data))\
+        .catch(error => console.error('Error:', error));\
+    }\
+    function uploadToEEPROM(){\
+      fetch('/uploadToEEPROM')\
+        .then(response => response.text())\
+        .then(data => alert(data))\
+        .catch(error => console.error('Error:', error));\
+    }\
+    function uploadFromWWW(){\
+      var fileURL = document.getElementById('fileURL').value;\
+      fetch('/uploadFromWWW?fileURL=' + fileURL)\
+        .then(response => response.text())\
+        .then(data => alert(data))\
+        .catch(error => console.error('Error:', error));\
+    }\
+  </script>\
+</body>\
+</html>";
+
   server.send(200, "text/html", html);
 }
+*/
+
+void handleRoot() {
+  String html = "<html>\
+<head>\
+<title>ESP8266 Control Interface</title>\
+</head>\
+<body style=\"color: rgb(51, 255, 51); background-color: rgb(1, 1, 1);\" alink=\"#000099\" link=\"#000099\" vlink=\"#990099\">\
+<h1 style=\"text-align: center;\">ESP8266 EEPROM Reader/Writer by Matoz</h1>\
+<br>\
+<br>\
+<table style=\"text-align: left; width: 1427px; height: 154px; margin-left: auto; margin-right: auto;\" border=\"1\" cellpadding=\"2\" cellspacing=\"2\">\
+<tbody>\
+<tr>\
+<td style=\"vertical-align: top; text-align: center;\"><span style=\"font-weight: bold;\">READING</span><br>\
+</td>\
+<td style=\"vertical-align: top; text-align: center;\"><span style=\"font-weight: bold;\">UPLOAD</span><br>\
+</td>\
+<td style=\"vertical-align: top; text-align: center;\"><span style=\"font-weight: bold;\">DOWNLOAD</span><br>\
+</td>\
+<td style=\"vertical-align: top; text-align: center;\"><span style=\"font-weight: bold;\">DELETE</span><br>\
+</td>\
+</tr>\
+<tr>\
+<td style=\"vertical-align: top;\"><label for=\"offsetSelect\">Offset Select: (From 0000 to 1FF0)</label> <input id=\"offsetSelect\" name=\"offsetSelect\" type=\"text\"> <input value=\"Read EEPROM From Radio at Offset\" type=\"submit\"></td>\
+<td style=\"vertical-align: top;\"><button onclick=\"uploadToEEPROM()\">Upload eeprom_data.bin file to radio EEPROM</button></td>\
+<td style=\"vertical-align: top;\"><button onclick=\"startDownload()\">Download eeprom_data.bin file</button></td>\
+<td style=\"vertical-align: top; text-align: left;\"><button onclick=\"deleteFile()\">Delete eeprom_data.bin File</button></td>\
+</tr>\
+<tr>\
+<td style=\"vertical-align: top;\"><button onclick=\"readEEPROM()\">Read EEPROM from Radio</button></td>\
+<td style=\"vertical-align: top;\"><button onclick=\"uploadFromWWW()\">Upload From WWW</button> <input id=\"fileURL\" placeholder=\"Enter file URL\" type=\"text\"></td>\
+<td style=\"vertical-align: top;\"><br>\
+</td>\
+<td style=\"vertical-align: top;\"><br>\
+</td>\
+</tr>\
+<tr>\
+<td style=\"vertical-align: top;\"><button onclick=\"pressButton()\">Read EEPROM from radio and save it!!</button></td>\
+<td style=\"vertical-align: top;\"><br>\
+</td>\
+<td style=\"vertical-align: top;\"><br>\
+</td>\
+<td style=\"vertical-align: top;\"><br>\
+</td>\
+</tr>\
+<tr>\
+<td style=\"vertical-align: top; text-align: left;\"><button onclick=\"readEEPROMFile()\">Read EEPROM from eeprom_data.bin File</button></td>\
+<td style=\"vertical-align: top;\"><br>\
+</td>\
+<td style=\"vertical-align: top;\"><br>\
+</td>\
+<td style=\"vertical-align: top;\"><br>\
+</td>\
+</tr>\
+</tbody>\
+</table>\
+<br>\
+<br>\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <br>\
+<br>\
+<br>\
+<br>\
+<script>\
+function startDownload(){\
+fetch('/download')\
+.then(response => response.text())\
+.then(data => alert(data))\
+.catch(error => console.error('Error:', error));\
+}\
+function pressButton(){\
+fetch('/button')\
+.then(response => response.text())\
+.then(data => alert(data))\
+.catch(error => console.error('Error:', error));\
+}\
+function deleteFile(){\
+fetch('/deletefile')\
+.then(response => response.text())\
+.then(data => alert(data))\
+.catch(error => console.error('Error:', error));\
+}\
+function readEEPROM(){\
+fetch('/readeeprom')\
+.then(response => response.text())\
+.then(data => alert(data))\
+.catch(error => console.error('Error:', error));\
+}\
+function readEEPROMFile(){\
+fetch('/readeepromfile')\
+.then(response => response.text())\
+.then(data => alert(data))\
+.catch(error => console.error('Error:', error));\
+}\
+function uploadToEEPROM(){\
+fetch('/uploadToEEPROM')\
+.then(response => response.text())\
+.then(data => alert(data))\
+.catch(error => console.error('Error:', error));\
+}\
+function uploadFromWWW(){\
+var fileURL = document.getElementById('fileURL').value;\
+fetch('/uploadFromWWW?fileURL=' + fileURL)\
+.then(response => response.text())\
+.then(data => alert(data))\
+.catch(error => console.error('Error:', error));\
+}\
+</script>\
+</body>\
+</html>";\
+  server.send(200, "text/html", html);
+}
+
+
+
 
 /*
   void handleReadEEPROMOffsetFromRadio() {
@@ -274,47 +538,47 @@ void handleReadEEPROM() {
 
 ////Escreve em DECODED TEXT
 /*
-void handleWriteEEPROM() {
+  void handleWriteEEPROM() {
   if (server.method() == HTTP_POST) {
     uint16_t address = server.arg("address").toInt();
     String data = server.arg("data");
-    
+
     Wire.beginTransmission(EEPROM_ADDRESS);
     Wire.write((byte)(address >> 8)); // Most significant byte
     Wire.write((byte)(address & 0xFF)); // Least significant byte
-    
+
     for (size_t i = 0; i < data.length(); i++) {
       Wire.write(data[i]);
     }
-    
+
     Wire.endTransmission();
-    
+
     server.send(200, "text/plain", "Write successful");
   } else {
     server.send(405, "text/plain", "Method Not Allowed");
   }
-}
+  }
 */
 void handleWriteEEPROM() {
   if (server.method() == HTTP_POST) {
     String addressStr = server.arg("address");
     uint16_t address = strtoul(addressStr.c_str(), NULL, 16); // Parse address as hexadecimal
-    
+
     String hexData = server.arg("data");
-    
+
     Wire.beginTransmission(EEPROM_ADDRESS);
     Wire.write((byte)(address >> 8)); // Byte mais significativo
     Wire.write((byte)(address & 0xFF)); // Byte menos significativo
-    
+
     // Escreve os dados hexadecimais diretamente na EEPROM
     for (size_t i = 0; i < hexData.length(); i += 2) {
       String hexByte = hexData.substring(i, i + 2);
       byte byteValue = (byte) strtol(hexByte.c_str(), NULL, 16);
       Wire.write(byteValue);
     }
-    
+
     Wire.endTransmission();
-    
+
     server.send(200, "text/plain", "Escrita bem sucedida");
   } else {
     server.send(405, "text/plain", "Método não permitido");
@@ -517,6 +781,120 @@ void handleDeleteFile() {
   }
 }
 
+/*
+  void handleUploadFromWWW() {
+  String fileURL = server.arg("fileURL");
+
+  // Verifica se o URL do arquivo foi fornecido
+  if (fileURL.isEmpty()) {
+    server.send(400, "text/plain", "Erro: URL do arquivo não fornecido");
+    return;
+  }
+
+  // Faz a solicitação HTTP para obter o arquivo binário
+  HTTPClient http;
+  http.begin(fileURL);
+  int httpCode = http.GET();
+
+  // Verifica se a solicitação HTTP foi bem-sucedida
+  if (httpCode != HTTP_CODE_OK) {
+    server.send(500, "text/plain", "Erro ao obter o arquivo do URL fornecido");
+    http.end();
+    return;
+  }
+
+  // Cria um buffer para armazenar os dados do arquivo
+  const size_t bufferSize = 2048;
+  uint8_t buffer[bufferSize];
+  size_t readSize = 0;
+
+  // Abre a EEPROM para escrita
+  EEPROM.begin(EEPROM_SIZE);
+
+  // Lê os dados do arquivo e escreve na EEPROM
+  size_t offset = 0;
+  WiFiClient *stream = http.getStreamPtr();
+  while (http.connected() && (readSize = stream->readBytes(buffer, bufferSize)) > 0) {
+    for (size_t i = 0; i < readSize; i++) {
+      EEPROM.write(offset + i, buffer[i]);
+    }
+    offset += readSize;
+    Serial.printf("Bytes lidos: %d, Offset: %d\n", readSize, offset);
+  }
+
+  // Finaliza a escrita na EEPROM e fecha a conexão HTTP
+  EEPROM.commit();
+  http.end();
+
+  server.send(200, "text/plain", "Upload do arquivo a partir de URL bem-sucedido");
+  }
+
+*/
+
+
+
+void handleUploadFromWWW() {
+  String fileURL = server.arg("fileURL");
+
+  // Verifica se o URL do arquivo foi fornecido
+  if (fileURL.isEmpty()) {
+    server.send(400, "text/plain", "Erro: URL do arquivo não fornecido");
+    return;
+  }
+
+  // Faz a solicitação HTTP para obter o arquivo binário
+  HTTPClient http;
+  http.begin(fileURL);
+  int httpCode = http.GET();
+
+  // Verifica se a solicitação HTTP foi bem-sucedida
+  if (httpCode != HTTP_CODE_OK) {
+    server.send(500, "text/plain", "Erro ao obter o arquivo do URL fornecido");
+    http.end();
+    return;
+  }
+
+  // Cria um buffer para armazenar os dados do arquivo
+  const size_t bufferSize = 16;
+  uint8_t buffer[bufferSize];
+  size_t readSize = 0;
+
+  // Abre a EEPROM para escrita
+  EEPROM.begin(EEPROM_SIZE);
+
+  // Lê os dados do arquivo e escreve na EEPROM
+  size_t offset = 0;
+  WiFiClient *stream = http.getStreamPtr();
+  unsigned long previousMillis = millis();  // Variable to store the last time the delay was updated
+  const unsigned long delayInterval = 100; // Delay interval in milliseconds
+  
+  while (http.connected() && (readSize = stream->readBytes(buffer, bufferSize)) > 0) {
+    EEPROM_WriteBuffer(offset, buffer, readSize); // Escreve os dados do buffer na EEPROM
+    offset += readSize;
+    Serial.printf("Bytes lidos: %d, Offset: %04X\n", readSize, offset); // Imprime o número de bytes lidos e o offset em hexadecimal
+    printHex(buffer, readSize, offset - readSize); // Imprime os bytes em formato hexadecimal e texto legível
+    
+    // Check if it's time to apply delay
+    if (millis() - previousMillis >= delayInterval) {
+      delay(delayInterval); // Apply delay
+      previousMillis = millis(); // Update the previous time
+    }
+  }
+
+  // Finaliza a escrita na EEPROM e fecha a conexão HTTP
+  EEPROM.commit();
+  http.end();
+
+  server.send(200, "text/plain", "Upload do arquivo a partir de URL bem-sucedido");
+}
+
+
+
+
+
+
+
+
 void setup() {
   Serial.begin(38400);
   delay(100);
@@ -528,13 +906,28 @@ void setup() {
 
   Wire.begin(SDA_PIN, SCL_PIN);
 
+#ifdef ENABLE_AP
   WiFi.mode(WIFI_AP);
   WiFi.softAP(ssid, password);
 
   Serial.println("Access Point (AP) started");
   Serial.print("AP IP address: ");
   Serial.println(WiFi.softAPIP());
+#else
+  // Change WiFi mode to Station (client) mode
+  WiFi.mode(WIFI_STA);
+  WiFi.begin(ssid, password); // Connect to the WiFi network
 
+  Serial.println("Connecting to WiFi...");
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(500);
+    Serial.print(".");
+  }
+  Serial.println("");
+  Serial.println("WiFi connected");
+  Serial.print("IP address: ");
+  Serial.println(WiFi.localIP());
+#endif
   pinMode(D3, INPUT_PULLUP);
 
   server.on("/", handleRoot);
@@ -546,12 +939,11 @@ void setup() {
   server.on("/readeepromfile", HTTP_GET, handleReadEEPROMFromFile); // Add new route
   server.on("/writeeeprom", HTTP_POST, handleWriteEEPROM);
   server.on("/readeepromoffset", HTTP_GET, handleReadEEPROMOffsetFromRadio);
-server.on("/uploadToEEPROM", handleUploadToEEPROM);
+  server.on("/uploadToEEPROM", handleUploadToEEPROM);
+  server.on("/uploadFromWWW", HTTP_GET, handleUploadFromWWW);
 
   server.begin();
-  Serial.println("HTTP server started");
-
-  Serial.println("Setup complete");
+  Serial.println("HTTP server started & Setup Complete, ready to use!!!");
 }
 
 void loop() {
@@ -605,5 +997,33 @@ void EEPROM_WriteBuffer(uint16_t Address, const void *pBuffer, uint16_t Size) {
     ptr++;
   }
   Wire.endTransmission();
+#ifdef ENABLE_250ms
+  delay(250);
+#else    
   delay(10); // delay necessário para garantir que a escrita seja concluída
+#endif
+}
+
+void printHex(uint8_t *data, size_t len, uint32_t offset) {
+  char buf[9];
+  for (size_t i = 0; i < len; i += 16) {
+    sprintf(buf, "%04X : ", offset + i);
+    Serial.print(buf);
+    for (size_t j = i; j < min(i + 16, len); j++) {
+      sprintf(buf, "%02X ", data[j]);
+      Serial.print(buf);
+    }
+    for (size_t j = 0; j < (16 - (len - i > 16 ? 0 : 16 - len + i)); j++) {
+      Serial.print("   ");
+    }
+    Serial.print(" ");
+    for (size_t j = i; j < min(i + 16, len); j++) {
+      if (isprint(data[j])) {
+        Serial.print((char)data[j]);
+      } else {
+        Serial.print(".");
+      }
+    }
+    Serial.println();
+  }
 }
