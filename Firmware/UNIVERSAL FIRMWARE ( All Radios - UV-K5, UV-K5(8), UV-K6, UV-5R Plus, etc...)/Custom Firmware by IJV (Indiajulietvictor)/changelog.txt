@@ -1,8 +1,68 @@
 QS K5 IJV Mod Changelog 
 
 
+
+V3.0        22-03-24
+----------------------------------------------------------------------------------
+- Accorpata nel VFO la banda 76-108 con FM Wide ed eliminato il programma 
+  originale di gestione. si richiama sempre con il tasto F + 0 ora e' possibile 
+  memorizzare le frequenze nelle normali memorie assegnandogli un nome
+  
+- creati 15 gruppi di memoria personalizzabili con scansione separata, eliminate le liste di scansione.
+
+- aggiunti 12 preset completamente personalizzabili 
+
+- aggiunto preselettore di banda
+
+- aggiunta visualizzazione BlackList
+
+- aggiunta Visualizzazione LOG di scansione con selezione automatica
+
+- modificata selezione RFGain 
+
+- aggiunta funzione AGC MAN ai tasti laterali per accedere rapidamente al controllo del RFGAIN.
+
+- Rivista tutta la struttura dati EEPROM e Predisposto per espansione da 999 memorie.
+
+- aggiunto squelch per ogni memoria / VFO / Banda
+
+- aggiunto flag blocco scansione per memoria
+
+- aggiunto flag write protect per memoria
+
+- aggiunto VFO LOCK al menu servizi per modalita' VFO / Memoria o Solo Memoria.
+
+- aggiunto codice selettiva per ogni memoria max 10 caratteri
+
+- aggiunta frequenza upconverter personalizzabile
+
+- aggiunte voci SLOW / FAST a scansione per ripresa lenta/rapida al termine della comunicazione
+  
+- Aggiunta nel menu la voce BLTYPE per scegliere la modalita' normale o invertita
+
+- aggiunto RESET DATA alla voce RESET del menu servizi per la cancellazione dei dati personali.
+
+- aggiunti menu popup a tendina per le operazioni veloci
+
+- aggiunti i tempi di 1, 3, 6 minuti per il Beacon e/o richiamata automatica 
+
+- modificato il layout dello schermo rivisti i font dei caratteri e le icone
+
+- semplificata procedura Reset VFO con parametri di base preimpostati
+
+
+
+
+----------------------------------------------------------------------------------
+01-02-24 Aggiornato Modulo Chirp
+----------------------------------------------------------------------------------
+31-01-24 Aggiornato Modulo Chirp
+----------------------------------------------------------------------------------
+
 V2.9 R5     30-01-24
 ----------------------------------------------------------------------------------
+ **** ATTENZIONE INSTALLARE SOLO CON K5PROG ****
+ 
 - aggiunto Squelch differenziato per singolo VFO
 - il cambio dello squelch da pulsanti laterali adesso salva l'ultimo valore.
 - aggiunta visualizzazione Frequenze e codici toni CTCSS e DCS nel VFO Singolo

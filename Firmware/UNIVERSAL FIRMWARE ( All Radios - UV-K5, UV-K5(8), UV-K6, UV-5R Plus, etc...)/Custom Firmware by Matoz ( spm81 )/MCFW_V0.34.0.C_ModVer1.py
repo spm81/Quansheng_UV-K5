@@ -46,7 +46,7 @@ DEBUG_SHOW_OBFUSCATED_COMMANDS = False
 DEBUG_SHOW_MEMORY_ACTIONS = False
 
 # TODO: remove the driver version when it's in mainline chirp
-DRIVER_VERSION = "Quansheng UV-K5 driver v20231101 (c) for openquack fagci"
+DRIVER_VERSION = "Quansheng UV-K5 driver v20231101 (c) for MCFWF"
 
 MEM_FORMAT = """
 #seekto 0x0000;
@@ -224,28 +224,28 @@ POWER_HIGH = 0b10
 POWER_MEDIUM = 0b01
 POWER_LOW = 0b00
 
-# dtmf_flags
-PTTID_LIST = ["off", "BOT", "EOT", "BOTH"]
-
 # power
 UVK5_POWER_LEVELS = [chirp_common.PowerLevel("Low",  watts=1.50),
                      chirp_common.PowerLevel("Med",  watts=3.00),
                      chirp_common.PowerLevel("High", watts=5.00),
                      ]
 
+# dtmf_flags
+PTTID_LIST = ["OFF", "BOT", "EOT", "BOTH"]
+
 # scrambler
-SCRAMBLER_LIST = ["off", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
+SCRAMBLER_LIST = ["OFF", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
 
 # channel display mode
-CHANNELDISP_LIST = ["Frequency", "Channel No", "Channel Name", "Name+freq"]
+CHANNELDISP_LIST = ["Frequency", "Channel No", "Channel Name", "Name+Freq"]
 # battery save
-BATSAVE_LIST = ["OFF", "1:1", "1:2", "1:3", "1:4"]
+BATSAVE_LIST = ["OFF", "1:1", "1:2", "1:3", "1:4", "1:5", "1:6", "1:7", "1:8", "1:9"]
 
 # Backlight auto mode
-BACKLIGHT_LIST = ["Off", "5sec", "10sec", "20sec", "1min", "2min", "On"]
+BACKLIGHT_LIST = ["OFF", "5sec", "10sec", "20sec", "1min", "2min", "On"]
 
 # Crossband receiving/transmitting
-CROSSBAND_LIST = ["Off", "Band A", "Band B"]
+CROSSBAND_LIST = ["OFF", "Band A", "Band B"]
 DUALWATCH_LIST = CROSSBAND_LIST
 
 # steps
@@ -283,18 +283,18 @@ DTCS_CODES = [
     731, 732, 734, 743, 754
 ]
 
-FLOCK_LIST = ["Off", "FCC", "CE", "GB", "LPD_PMR"]
+FLOCK_LIST = ["OFF", "FCC", "CE", "GB", "LPD_PMR"]
 
 SCANRESUME_LIST = ["TO: Resume after 5 seconds",
                    "CO: Resume after signal dissapears",
                    "SE: Stop scanning after receiving a signal"]
 
 WELCOME_LIST = ["Full Screen", "Message", "Voltage"]
-KEYPADTONE_LIST = ["Off", "Chinese", "English"]
+KEYPADTONE_LIST = ["OFF", "Chinese", "English"]
 LANGUAGE_LIST = ["Chinese", "English"]
 ALARMMODE_LIST = ["SITE", "TONE"]
-REMENDOFTALK_LIST = ["Off", "ROGER", "MDC"]
-RTE_LIST = ["Off", "100ms", "200ms", "300ms", "400ms",
+#REMENDOFTALK_LIST = ["OFF", "ROGER", "MDC"]
+RTE_LIST = ["OFF", "100ms", "200ms", "300ms", "400ms",
             "500ms", "600ms", "700ms", "800ms", "900ms"]
 ALL_TX = ["DEFAULT", "ENABLE", "DISABLE"]
 
@@ -303,7 +303,7 @@ PROG_SIZE = 0x1d00  # size of the memory that we will write
 MEM_BLOCK = 0x80  # largest block of memory that we can reliably write
 
 # fm radio supported frequencies
-FMMIN = 87.5
+FMMIN = 76.0
 FMMAX = 108.0
 
 # bands supported by the UV-K5
@@ -319,13 +319,13 @@ BANDS = {
 
 # for radios with modified firmware:
 BANDS_NOLIMITS = {
-        0: [15.0, 107.9999],
+        0: [0.0, 107.9999],
         1: [108.0, 135.9999],
         2: [136.0, 173.9990],
         3: [174.0, 349.9999],
         4: [350.0, 399.9999],
         5: [400.0, 469.9999],
-        6: [470.0, 1340.0]
+        6: [470.0, 6500.0]
         }
 
 SPECIALS = {
@@ -533,6 +533,7 @@ def _resetradio(serport):
 
 
 def do_download(radio):
+    """download eeprom from radio"""
     serport = radio.pipe
     serport.timeout = 0.5
     status = chirp_common.Status()
@@ -604,7 +605,7 @@ def _find_band(self, hz):
 
     # currently the hacked firmware sets band=1 below 50MHz
     if self.FIRMWARE_NOLIMITS and mhz < 50.0:
-        return 1
+        return 0
 
     for a in B:
         if mhz >= B[a][0] and mhz <= B[a][1]:
@@ -661,6 +662,7 @@ class UVK5Radio(chirp_common.CloneModeRadio):
         rf.valid_name_length = 10
         rf.valid_power_levels = UVK5_POWER_LEVELS
         rf.valid_special_chans = list(SPECIALS.keys())
+        #rf.valid_duplexes = ["", "-", "+", "off"]
 
         # hack so we can input any frequency,
         # the 0.1 and 0.01 steps don't work unfortunately
@@ -671,7 +673,7 @@ class UVK5Radio(chirp_common.CloneModeRadio):
                                 "->Tone", "->DTCS", "DTCS->", "DTCS->DTCS"]
 
         rf.valid_characters = chirp_common.CHARSET_ASCII
-        rf.valid_modes = ["FM", "NFM", "AM", "NAM", "SSB", "BYP", "RAW"]
+        rf.valid_modes = ["FM", "NFM", "AM", "NAM", "USB"]
         rf.valid_tmodes = ["", "Tone", "TSQL", "DTCS", "Cross"]
 
         rf.valid_skips = [""]
@@ -944,13 +946,13 @@ class UVK5Radio(chirp_common.CloneModeRadio):
         is_bclo = bool(_mem.bclo > 0)
         rs = RadioSetting("bclo", "BCLO", RadioSettingValueBoolean(is_bclo))
         mem.extra.append(rs)
-        tmpcomment += "BCLO:"+(is_bclo and "ON" or "off")+" "
+        tmpcomment += "BCLO:"+(is_bclo and "ON" or "OFF")+" "
 
         # Frequency reverse - whatever that means, don't see it in the manual
         is_frev = bool(_mem.freq_reverse > 0)
         rs = RadioSetting("frev", "FreqRev", RadioSettingValueBoolean(is_frev))
         mem.extra.append(rs)
-        tmpcomment += "FreqReverse:"+(is_frev and "ON" or "off")+" "
+        tmpcomment += "FreqReverse:"+(is_frev and "ON" or "OFF")+" "
 
         # PTTID
         pttid = _mem.dtmf_pttid
@@ -964,7 +966,7 @@ class UVK5Radio(chirp_common.CloneModeRadio):
         rs = RadioSetting("dtmfdecode", "DTMF decode",
                           RadioSettingValueBoolean(is_dtmf))
         mem.extra.append(rs)
-        tmpcomment += "DTMFdecode:"+(is_dtmf and "ON" or "off")+" "
+        tmpcomment += "DTMFdecode:"+(is_dtmf and "ON" or "OFF")+" "
 
         # Scrambler
         if _mem.scrambler & 0x0f < len(SCRAMBLER_LIST):
@@ -1082,9 +1084,9 @@ class UVK5Radio(chirp_common.CloneModeRadio):
                 _mem.alarm_mode = ALARMMODE_LIST.index(str(element.value))
 
             # Reminding of end of talk
-            if element.get_name() == "reminding_of_end_talk":
-                _mem.reminding_of_end_talk = REMENDOFTALK_LIST.index(
-                    str(element.value))
+#            if element.get_name() == "reminding_of_end_talk":
+#                _mem.reminding_of_end_talk = REMENDOFTALK_LIST.index(
+#                    str(element.value))
 
             # Repeater tail tone elimination
             if element.get_name() == "repeater_tail_elimination":
@@ -1287,7 +1289,7 @@ class UVK5Radio(chirp_common.CloneModeRadio):
         # Programmable keys
         tmpval = int(_mem.key1_shortpress_action)
         if tmpval >= len(KEYACTIONS_LIST):
-            tmpval = 0
+            tmpval = 3
         rs = RadioSetting("key1_shortpress_action", "Side key 1 short press",
                           RadioSettingValueList(
                               KEYACTIONS_LIST, KEYACTIONS_LIST[tmpval]))
@@ -1295,7 +1297,7 @@ class UVK5Radio(chirp_common.CloneModeRadio):
 
         tmpval = int(_mem.key1_longpress_action)
         if tmpval >= len(KEYACTIONS_LIST):
-            tmpval = 0
+            tmpval = 7
         rs = RadioSetting("key1_longpress_action", "Side key 1 long press",
                           RadioSettingValueList(
                               KEYACTIONS_LIST, KEYACTIONS_LIST[tmpval]))
@@ -1303,7 +1305,7 @@ class UVK5Radio(chirp_common.CloneModeRadio):
 
         tmpval = int(_mem.key2_shortpress_action)
         if tmpval >= len(KEYACTIONS_LIST):
-            tmpval = 0
+            tmpval = 2
         rs = RadioSetting("key2_shortpress_action", "Side key 2 short press",
                           RadioSettingValueList(
                               KEYACTIONS_LIST, KEYACTIONS_LIST[tmpval]))
@@ -1311,7 +1313,7 @@ class UVK5Radio(chirp_common.CloneModeRadio):
 
         tmpval = int(_mem.key2_longpress_action)
         if tmpval >= len(KEYACTIONS_LIST):
-            tmpval = 0
+            tmpval = 4
         rs = RadioSetting("key2_longpress_action", "Side key 2 long press",
                           RadioSettingValueList(
                               KEYACTIONS_LIST, KEYACTIONS_LIST[tmpval]))
@@ -1579,7 +1581,7 @@ class UVK5Radio(chirp_common.CloneModeRadio):
         # squelch
         tmpsq = _mem.squelch
         if tmpsq > 9:
-            tmpsq = 1
+            tmpsq = 2
         rs = RadioSetting("squelch", "Squelch",
                           RadioSettingValueInteger(0, 9, tmpsq))
         basic.append(rs)
@@ -1762,16 +1764,16 @@ class UVK5Radio(chirp_common.CloneModeRadio):
         basic.append(rs)
 
         # Reminding of end of talk
-        tmpalarmmode = _mem.reminding_of_end_talk
-        if tmpalarmmode >= len(REMENDOFTALK_LIST):
-            tmpalarmmode = 0
-        rs = RadioSetting(
-                "reminding_of_end_talk",
-                "Reminding of end of talk",
-                RadioSettingValueList(
-                    REMENDOFTALK_LIST,
-                    REMENDOFTALK_LIST[tmpalarmmode]))
-        basic.append(rs)
+ #       tmpalarmmode = _mem.reminding_of_end_talk
+ #       if tmpalarmmode >= len(REMENDOFTALK_LIST):
+ #           tmpalarmmode = 0
+ #       rs = RadioSetting(
+ #               "reminding_of_end_talk",
+ #               "Reminding of end of talk",
+ #               RadioSettingValueList(
+ #                   REMENDOFTALK_LIST,
+ #                   REMENDOFTALK_LIST[tmpalarmmode]))
+ #       basic.append(rs)
 
         # Repeater tail tone elimination
         tmprte = _mem.repeater_tail_elimination
@@ -2046,13 +2048,13 @@ class UVK5Radio(chirp_common.CloneModeRadio):
 class UVK5Radio_nolimit(UVK5Radio):
     VENDOR = "Quansheng"
     MODEL = "UV-K5 Matoz"
-    VARIANT = "V0.33.0C"
+    VARIANT = "V0.34.0C"
     FIRMWARE_NOLIMITS = True
 
     def get_features(self):
         rf = UVK5Radio.get_features(self)
         # This is what the BK4819 chip supports
-        rf.valid_bands = [(18000000,  620000000),
-                          (840000000, 1300000000)
+        rf.valid_bands = [(0000000,  620000000),
+                          (840000000, 1500000000)
                           ]
         return rf
