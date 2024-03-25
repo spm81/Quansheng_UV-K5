@@ -29,6 +29,35 @@
 * Podes-me encontrar no [Telegram](https://t.me/PMR446PT) (Portuguese Only) !!!<br>
 * **Feel free to improve my firmware** - [Here is my Source Code of MCFW](https://github.com/spm81/MCFW_UV-K5_Open_Source_Firmware)<br><br>
 
+**MCFW V0.34.0C** - Based on MCFW V0.31.xC ( With better improvement on SQL and DTMF Disabled )<br>
+I would like to thank [**nrlourenco**](https://github.com/nrlourenco) and especially [**joaquimorg**](https://github.com/joaquimorg) for helping me with this firmware version<br><br>
+<img align="left" width="300" src="Pictures/MCFW_Firmware_Logo2.jpg" />
+**NEW on this Firmware** :
+
+	* Squelch in MENU resolved 
+	* Resolved ScanList start
+	* Resolved minor things
+
+	* Added to MENU BatSave 1:5, 1:6, 1:7, 1:8, 1:9 (Greater battery saving on radio)
+	* Added Encryption to Messenger
+	* Added MsgEnc MENU to Messenger
+	* Added MsgAck MENU to Messenger
+	* Added MENU MsgRBN(Roger Beep Notification) to Messenger
+	* Added MENU MsgMod (AFSK 1.2K / FSK 700 / FSK 450) to Messenger
+	* Added LIST1+2 to MENU SList (only searches for channels memorized from list 1 and list 2).
+	* Added MENU LCD Inv (LCD Inverter), inverts the colors to the radio
+	* Added the SATCOM MENU (Note: Search with OFF and ON, as some frequencies work best in OFF and others in ON. 
+ 		When selecting ON or OFF you will have to change frequency/memory for it to take effect.)
+	* Added the PTTHOLD MENU, when you press the PTT button once it will become active until you press the PTT button again, that is, press it once to activate and once to turn off.
+	* Added MENU M CALL, when activating M CAL when receiving a call or RX is activated (Only when it enters SAVE MODE), the LED will blink and there will be a missed call on the LCD.
+	* Added more Rogers Beeps among other minor things
+
+	* FM RADIO only has VFO, i.e. manual search
+
+	* Secret MENU to change permissions regarding TX - POWER+FN1
+	* MCFW Secret MENU to delete LOCK and Messenger Passwords - POWER+M
+ <br><br>
+
 <img align="left" width="530" src="Pictures/UV-K5-keypad-T9.jpg" />
 
 # Messenger Keys
