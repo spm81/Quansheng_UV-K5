@@ -289,7 +289,7 @@ SCANRESUME_LIST = ["TO: Resume after 5 seconds",
                    "CO: Resume after signal dissapears",
                    "SE: Stop scanning after receiving a signal"]
 
-WELCOME_LIST = ["Full Screen", "Message", "Voltage"]
+WELCOME_LIST = ["LOGO", "Message", "Voltage"]
 KEYPADTONE_LIST = ["OFF", "Chinese", "English"]
 LANGUAGE_LIST = ["Chinese", "English"]
 ALARMMODE_LIST = ["SITE", "TONE"]
